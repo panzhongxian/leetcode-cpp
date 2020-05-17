@@ -1,7 +1,7 @@
 #include "base.h"
 class Solution {
 public:
-  vector<int> twoSum(vector<int> &nums, int target) {
+  vector<int> twoSum(const vector<int> &nums, int target) {
     unordered_map<int, int> num_idx_mp;
     for (int i = 0; i < nums.size(); ++i) {
       int res = target - nums[i];
@@ -17,14 +17,9 @@ public:
 #if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
-  {
-    vector<int> input = {1, 2, 3, 4};
-    EXPECT_EQ(s.twoSum(input, 4), vector<int>({0, 2}));
-  }
-  {
-    vector<int> input = {1, 2, 3, 4};
-    EXPECT_EQ(s.twoSum(input, 9), vector<int>());
-  }
+  EXPECT_EQ(s.twoSum(vector<int>({1, 2, 3, 4}), 4), vector<int>({0, 2}));
+  EXPECT_EQ(s.twoSum(vector<int>({1, 2, 3, 4}), 9), vector<int>());
+  EXPECT_EQ(s.twoSum(vector<int>({1, 2, 3, 4}), 5), vector<int>({1, 2}));
 }
 
 int main() {
@@ -37,8 +32,7 @@ int main() {
 static void BM_S(benchmark::State &state) {
   for (auto _ : state) {
     Solution s;
-    vector<int> input = {1, 2, 3, 4};
-    EXPECT_EQ(s.twoSum(input, 4), vector<int>({0, 2}));
+    s.twoSum(vector<int>({1, 2, 3, 4}), 4);
   }
 }
 

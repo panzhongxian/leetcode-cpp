@@ -23,3 +23,31 @@ cc_binary(
     local_defines = ["LC_BM"],
     deps = [":base"],
 )
+
+cc_binary(
+    name = "15_three_sum",
+    srcs = glob(["0015_*.cc"]),
+    local_defines = ["LC_TEST"],
+    deps = [":base"],
+)
+
+cc_binary(
+    name = "15_three_sum_bm",
+    srcs = glob(["0015_*.cc"]),
+    local_defines = ["LC_BM"],
+    deps = [":base"],
+)
+
+cc_binary(
+    name = "18_four_sum",
+    srcs = glob(["0018_*.cc"]),
+    local_defines = ["LC_TEST"],
+    deps = [":base"],
+)
+
+cc_binary(
+    name = "18_four_sum_bm",
+    srcs = glob(["0018_*.cc"]),
+    local_defines = ["LC_BM"],
+    deps = [":base"],
+)

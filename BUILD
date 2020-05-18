@@ -25,6 +25,34 @@ cc_binary(
 )
 
 cc_binary(
+    name = "2_add_two_numbers",
+    srcs = glob(["0002_*.cc"]),
+    local_defines = ["LC_TEST"],
+    deps = [":base"],
+)
+
+cc_binary(
+    name = "2_add_two_numbers_bm",
+    srcs = glob(["0002_*.cc"]),
+    local_defines = ["LC_BM"],
+    deps = [":base"],
+)
+
+cc_binary(
+    name = "11_container_with_most_water",
+    srcs = glob(["0011_*.cc"]),
+    local_defines = ["LC_TEST"],
+    deps = [":base"],
+)
+
+cc_binary(
+    name = "11_container_with_most_water_bm",
+    srcs = glob(["0011_*.cc"]),
+    local_defines = ["LC_BM"],
+    deps = [":base"],
+)
+
+cc_binary(
     name = "15_three_sum",
     srcs = glob(["0015_*.cc"]),
     local_defines = ["LC_TEST"],

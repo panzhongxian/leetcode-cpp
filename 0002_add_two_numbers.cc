@@ -2,7 +2,7 @@
 typedef base::ListNode<int> ListNode;
 
 class Solution {
-public:
+ public:
   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
     if (!l1 && !l2) {
       return nullptr;
@@ -33,8 +33,7 @@ public:
       int cur_digit = p->val + carry;
       cur->val = cur_digit % 10;
       carry = cur_digit / 10;
-      p1 = p1->next;
-      p2 = p2->next;
+      p = p->next;
     }
 
     if (carry) {
@@ -48,10 +47,22 @@ public:
 #if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
-  ListNode *l1 = ListNode::Factory({1, 2, 4});
-  ListNode *l2 = ListNode::Factory({1, 2, 4});
-  ListNode *l = s.addTwoNumbers(l1, l2);
-  EXPECT_EQ(ListNode::Dump(l), vector<int>({2, 4, 8}));
+  EXPECT_EQ(ListNode::Dump(s.addTwoNumbers(ListNode::Factory({1, 2, 4}),
+                                           ListNode::Factory({1, 2, 4}))),
+            vector<int>({2, 4, 8}));
+
+  EXPECT_EQ(ListNode::Dump(s.addTwoNumbers(ListNode::Factory({1, 2, 6}),
+                                           ListNode::Factory({1, 2, 4}))),
+            vector<int>({2, 4, 0, 1}));
+
+  EXPECT_EQ(
+      ListNode::Dump(s.addTwoNumbers(ListNode::Factory({1, 2, 6}), nullptr)),
+      vector<int>({1, 2, 6}));
+
+  EXPECT_EQ(ListNode::Dump(s.addTwoNumbers(ListNode::Factory({1, 2, 6}), {0})),
+            vector<int>({1, 2, 6}));
+
+  EXPECT_EQ(ListNode::Dump(s.addTwoNumbers(nullptr, nullptr)), vector<int>());
 }
 
 int main() {

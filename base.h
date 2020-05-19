@@ -1,24 +1,26 @@
 #ifndef _BASE_H_
 #define _BASE_H_
 
-#include "benchmark/benchmark.h"
-#include "gtest/gtest.h"
 #include <algorithm>
+#include <cmath>
 #include <map>
 #include <string>
 #include <unordered_map>
 #include <vector>
 
+#include "benchmark/benchmark.h"
+#include "gtest/gtest.h"
+
 using namespace std;
 
 namespace base {
-template <class T> struct ListNode {
+template <class T>
+struct ListNode {
   T val;
   ListNode *next;
   ListNode(T x) : val(x), next(NULL) {}
   static ListNode *Factory(const std::initializer_list<T> l) {
-    if (l.size() == 0)
-      return nullptr;
+    if (l.size() == 0) return nullptr;
     auto iter = l.begin();
     ListNode *cur = new ListNode(*iter);
     ListNode *ret = cur;
@@ -52,6 +54,6 @@ template <class T> struct ListNode {
   */
 };
 
-} // namespace base
+}  // namespace base
 
 #endif

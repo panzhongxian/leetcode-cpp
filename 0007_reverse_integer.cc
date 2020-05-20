@@ -1,6 +1,8 @@
 #include "base.h"
-constexpr int upper_limit = pow(2, 31) - 1;  // 2147483647
-constexpr int lower_limit = -pow(2, 31);     // -2147483648
+// constexpr int upper_limit = pow(2, 31) - 1;  // 2147483647
+// constexpr int lower_limit = -pow(2, 31);     // -2147483648
+const int upper_limit = 2147483647;
+const int lower_limit = -2147483648;
 
 class Solution {
  public:

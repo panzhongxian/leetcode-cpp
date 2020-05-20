@@ -1,6 +1,6 @@
 #include "base.h"
 class Solution {
-public:
+ public:
   vector<vector<int>> threeSum(vector<int> &nums) {
     vector<vector<int>> ret;
     sort(nums.begin(), nums.end());
@@ -13,20 +13,16 @@ public:
     }
 
     for (int i = 0; i < nums.size(); ++i) {
-      if (i > 0 && nums[i] == nums[i - 1])
-        continue;
+      if (i > 0 && nums[i] == nums[i - 1]) continue;
 
       for (int j = i + 1; j < nums.size(); ++j) {
-        if (j > i + 1 && nums[j] == nums[j - 1])
-          continue;
+        if (j > i + 1 && nums[j] == nums[j - 1]) continue;
 
         int a = nums[i];
         int b = nums[j];
         int res = -a - b;
-        if (res < b)
-          break;
-        if (res < a)
-          goto EXIT;
+        if (res < b) break;
+        if (res < a) goto EXIT;
 
         if (num_cnt_mp.count(res) == 0) {
           continue;
@@ -50,7 +46,6 @@ public:
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo1) {
   Solution s;
   vector<int> p = {-1, 0, 1, 2, -1, -4};
@@ -73,23 +68,3 @@ TEST(S, Demo2) {
                               {-2, -2, 4},
                               {-2, 0, 2}}));
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    // Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

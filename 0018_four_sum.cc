@@ -2,7 +2,7 @@
 
 typedef unordered_map<int, vector<pair<int, int>>>::const_iterator umc_iter;
 class Solution {
-public:
+ public:
   void insert_valid_quadruplet(const vector<int> &nums, set<vector<int>> &ret,
                                const vector<pair<int, int>> &v1,
                                const vector<pair<int, int>> &v2) {
@@ -36,8 +36,7 @@ public:
     for (umc_iter iter1 = pair_sum_mp.begin(); iter1 != pair_sum_mp.end();
          ++iter1) {
       umc_iter iter2 = pair_sum_mp.find(target - iter1->first);
-      if (iter2 == pair_sum_mp.end())
-        continue;
+      if (iter2 == pair_sum_mp.end()) continue;
 
       // TODO: stop if passed.
       // if (iter2 < iter1)
@@ -53,29 +52,8 @@ public:
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
   vector<int> input({1, 0, -1, 0, -2, 2});
   s.fourSum(input, 0);
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    // Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

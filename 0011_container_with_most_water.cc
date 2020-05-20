@@ -1,6 +1,6 @@
 #include "base.h"
 class Solution {
-public:
+ public:
   /*
    * https://leetcode.com/problems/container-with-most-water/discuss/6099/yet-another-way-to-see-what-happens-in-the-on-algorithm
    * https://zhuanlan.zhihu.com/p/33737430
@@ -12,7 +12,6 @@ public:
   }
 
   int maxArea(const vector<int> &height) {
-
     int i, j;
     i = 0;
     j = height.size() - 1;
@@ -30,7 +29,6 @@ public:
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
   EXPECT_EQ(s.maxArea(vector<int>({1, 4, 2})), 2);
@@ -43,23 +41,3 @@ TEST(S, Demo) {
   EXPECT_EQ(s.maxArea(vector<int>({2, 3, 4, 5, 18, 17, 6})), 17);
   EXPECT_EQ(s.maxArea(vector<int>({1, 2, 3, 4, 5, 6, 7, 8, 9, 10})), 25);
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

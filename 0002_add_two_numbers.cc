@@ -44,7 +44,6 @@ class Solution {
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
   EXPECT_EQ(ListNode::Dump(s.addTwoNumbers(ListNode::Factory({1, 2, 4}),
@@ -64,23 +63,3 @@ TEST(S, Demo) {
 
   EXPECT_EQ(ListNode::Dump(s.addTwoNumbers(nullptr, nullptr)), vector<int>());
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

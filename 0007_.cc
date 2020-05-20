@@ -28,7 +28,6 @@ class Solution {
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
   EXPECT_EQ(s.reverse(0), 0);
@@ -38,25 +37,4 @@ TEST(S, Demo) {
   EXPECT_EQ(s.reverse(-2147447412), -2147447412);
   EXPECT_EQ(s.reverse(1234), 4321);
   EXPECT_EQ(s.reverse(-1234), -4321);
-  // execute s.Solve
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

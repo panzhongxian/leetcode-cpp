@@ -28,7 +28,6 @@ class Solution {
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
   EXPECT_EQ(s.lengthOfLongestSubstring("abcba"), 3);
@@ -36,25 +35,4 @@ TEST(S, Demo) {
   EXPECT_EQ(s.lengthOfLongestSubstring("abca"), 3);
   EXPECT_EQ(s.lengthOfLongestSubstring("aaaaa"), 1);
   EXPECT_EQ(s.lengthOfLongestSubstring("a"), 1);
-  // execute s.Solve
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

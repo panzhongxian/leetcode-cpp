@@ -44,31 +44,9 @@ class Solution {
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
   EXPECT_EQ(s.addBinary("11", "1"), "100");
   EXPECT_EQ(s.addBinary("1111", ""), "100");
   EXPECT_EQ(s.addBinary("1010", "1011"), "10101");
-  // execute s.Solve
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

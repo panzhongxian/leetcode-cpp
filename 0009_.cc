@@ -17,7 +17,6 @@ class Solution {
   }
 };
 
-#if defined(LC_TEST)
 TEST(S, Demo) {
   Solution s;
   EXPECT_EQ(s.isPalindrome(0), true);
@@ -32,25 +31,4 @@ TEST(S, Demo) {
   EXPECT_EQ(s.isPalindrome(1000), false);
   EXPECT_EQ(s.isPalindrome(1001), true);
   EXPECT_EQ(s.isPalindrome(10001), true);
-  // execute s.Solve
 }
-
-int main() {
-  testing::InitGoogleTest();
-  return RUN_ALL_TESTS();
-}
-
-#elif defined(LC_BM)
-
-static void BM_S(benchmark::State &state) {
-  for (auto _ : state) {
-    Solution s;
-    // execute s.Solve
-  }
-}
-
-BENCHMARK(BM_S);
-
-BENCHMARK_MAIN();
-
-#endif

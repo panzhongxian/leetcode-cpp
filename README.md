@@ -2,6 +2,14 @@
 
 [![Travis Build Status][travis-image]][travis-url]
 
+
+## Check format and test
+
+```bash
+cd top_dir_of_the_project
+sh tools/presubmit.sh
+```
+
 # Summary
 
 ## 数字翻转

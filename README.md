@@ -1,3 +1,7 @@
+# LeetCode Cpp
+
+[![Travis Build Status][travis-image]][travis-url]
+
 # Summary
 
 ## 数字翻转
@@ -27,4 +31,7 @@ i + 1< s.size()
 ```
 或者将`s.size()`转换成`signed int`
 
+
+[travis-url]: https://travis-ci.org/census-instrumentation/opencensus-cpp
+[travis-url]: https://travis-ci.org/github/panzhongxian/leetcode-cpp
 

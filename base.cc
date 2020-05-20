@@ -2,4 +2,4 @@
 namespace base {
 
 // pass
-} // namespace base
+}  // namespace base

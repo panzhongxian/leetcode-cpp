@@ -53,6 +53,20 @@ cc_binary(
 )
 
 cc_binary(
+    name = "5_longest_palindromic_substring",
+    srcs = glob(["0005_*.cc"]),
+    local_defines = ["LC_TEST"],
+    deps = [":base"],
+)
+
+cc_binary(
+    name = "5_longest_palindromic_substring_bm",
+    srcs = glob(["0005_*.cc"]),
+    local_defines = ["LC_BM"],
+    deps = [":base"],
+)
+
+cc_binary(
     name = "7_reverse_integer",
     srcs = glob(["0007_*.cc"]),
     local_defines = ["LC_TEST"],

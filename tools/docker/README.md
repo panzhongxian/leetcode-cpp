@@ -8,7 +8,7 @@ docker build --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_p
 ## Coverage
 
 ```bash
-docker run -v $PWD:/leetcode-cpp -e http_proxy=$http_proxy -e https_proxy=$https_proxy -t -i ubuntu:18.04 /leetcode-cpp/tools/coverage.sh
+docker run -v $PWD:/leetcode-cpp -e http_proxy=$http_proxy -e https_proxy=$https_proxy -t -i ubuntu:18.04 /bin/sh -c "cd leetcode-cpp && tools/coverage.sh"
 ```
 
 ## Format Code

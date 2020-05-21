@@ -28,7 +28,7 @@ while [[ "$1" != "" ]]; do
     shift
 done
 
-FIND="find . -name .git -prune -o -name _deps -prune -o -name .build -prune -o"
+FIND="find . -name .git -prune -o -name pic -prune -o -name _deps -prune -o -name .build -prune -o"
 
 if [[ "$sed_check" == "y" ]]; then
   # No CRLF line endings.

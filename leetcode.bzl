@@ -23,7 +23,6 @@ def lc_deps():
 def lc_gen(index):
     index = str(int(index))
     file_pattern = (4 - len(index)) * "0" + index + "_*"
-    print(file_pattern)
     target_name = native.glob(["src/" + file_pattern + ".h"])[0].rstrip(".h").lstrip("src/")
     native.cc_library(
         name = target_name,

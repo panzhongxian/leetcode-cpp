@@ -23,9 +23,24 @@ def lc_deps():
 def lc_gen(index):
     index = str(int(index))
     file_pattern = (4 - len(index)) * "0" + index + "_*"
-    target_name = native.glob([file_pattern + ".cc"])[0].rstrip(".cc")
+    target_name = native.glob([file_pattern + ".h"])[0].rstrip(".h")
+    native.cc_library(
+        name = target_name,
+        srcs = [target_name + ".h"],
+        deps = [
+            "@com_google_googletest//:gtest_main",
+            ":base",
+        ],
+    )
+
+    test_file_name = "test/" + target_name + "_test.cc"
+    if not len(native.glob([test_file_name])):
+        return
+
     native.cc_test(
         name = target_name + "_test",
-        srcs = native.glob([file_pattern]),
-        deps = [":base"],
+        srcs = [test_file_name],
+        deps = [
+            "//:" + target_name,
+        ],
     )

@@ -18,10 +18,3 @@ lc_deps()
     21,
     67,
 ]]
-
-# cc_binary(
-#     name = "67_add_binary_bm",
-#     srcs = glob(["0067_*.cc"]),
-#     local_defines = ["LC_BM"],
-#     deps = [":base"],
-# )

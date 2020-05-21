@@ -20,5 +20,3 @@ class Solution {
     return ret;
   }
 };
-
-TEST(S, Demo) { Solution s; }

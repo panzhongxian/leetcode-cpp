@@ -26,5 +26,3 @@ class Solution {
     return strs[0].substr(0, max_comm_len);
   }
 };
-
-TEST(S, Demo) { Solution s; }

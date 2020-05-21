@@ -29,10 +29,3 @@ class Solution {
     return stack.empty();
   }
 };
-
-TEST(S, Demo) {
-  Solution s;
-  EXPECT_EQ(s.isValid(""), true);
-  EXPECT_EQ(s.isValid("[]"), true);
-  EXPECT_EQ(s.isValid("[(]])]"), false);
-}

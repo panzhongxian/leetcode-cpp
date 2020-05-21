@@ -23,10 +23,11 @@ def lc_deps():
 def lc_gen(index):
     index = str(int(index))
     file_pattern = (4 - len(index)) * "0" + index + "_*"
-    target_name = native.glob([file_pattern + ".h"])[0].rstrip(".h")
+    print(file_pattern)
+    target_name = native.glob(["src/" + file_pattern + ".h"])[0].rstrip(".h").lstrip("src/")
     native.cc_library(
         name = target_name,
-        srcs = [target_name + ".h"],
+        srcs = ["src/" + target_name + ".h"],
         deps = [
             "@com_google_googletest//:gtest_main",
             ":base",
@@ -40,6 +41,7 @@ def lc_gen(index):
     native.cc_test(
         name = target_name + "_test",
         srcs = [test_file_name],
+        copts = ["-Isrc/"],
         deps = [
             "//:" + target_name,
         ],

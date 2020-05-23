@@ -1,5 +1,3 @@
 #include "base.h"
-namespace base {
 
-// pass
-}  // namespace base
+namespace base {}  // namespace base

@@ -17,3 +17,10 @@ http_archive(
     strip_prefix = "benchmark-master",
     urls = ["https://github.com/google/benchmark/archive/master.zip"],
 )
+
+# Depend on Abseil.
+http_archive(
+    name = "com_google_absl",
+    strip_prefix = "abseil-cpp-master",
+    urls = ["https://github.com/abseil/abseil-cpp/archive/master.zip"],
+)

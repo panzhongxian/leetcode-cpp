@@ -64,6 +64,9 @@ TreeNode<T> *TreeNodeFactory(const std::string &input) {
 
   absl::ConsumePrefix(&list_str, "[");
   absl::ConsumeSuffix(&list_str, "]");
+  if (list_str == "") {
+    return nullptr;
+  }
 
   for (auto c : absl::StrSplit(list_str, ',')) {
     while (absl::ConsumePrefix(&c, " ")) {

@@ -47,12 +47,14 @@ struct ListNode {
 };
 
 template <class T>
-struct TreeNode {
+class TreeNode {
+ public:
   T val;
   TreeNode *left;
   TreeNode *right;
-  TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(T x) : val(x), left(nullptr), right(nullptr) {}
+  TreeNode *next;
+  TreeNode() : val(0), left(nullptr), right(nullptr), next(nullptr) {}
+  TreeNode(T x) : val(x), left(nullptr), right(nullptr), next(nullptr) {}
   TreeNode(T x, TreeNode *left, TreeNode *right)
       : val(x), left(left), right(right) {}
 };
@@ -95,7 +97,7 @@ TreeNode<T> *TreeNodeFactory(const std::string &input) {
       cur_root->right = level_traversal[i];
       do {
         ++cur_root_idx;
-        if (cur_root_idx >= i) {
+        if (cur_root_idx > i) {
           return level_traversal[0];
         }
       } while (!level_traversal[cur_root_idx]);
@@ -112,6 +114,8 @@ vector<T> DumpTree(TreeNode<T> *t) {
 
   // vector<T*>
 }
+
+// TODO 应该怎么派生TreeNode的类，才能使用上边的工厂函数？
 
 }  // namespace base
 

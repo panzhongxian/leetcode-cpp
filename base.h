@@ -6,6 +6,7 @@
 #include <map>
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 #include "absl/strings/str_split.h"
@@ -44,6 +45,15 @@ struct ListNode {
 
     return ret;
   }
+};
+
+template <class T>
+struct BiDirListNode {
+  T val;
+  BiDirListNode *prev;
+  BiDirListNode *next;
+  BiDirListNode() : prev(NULL), next(NULL) {}
+  BiDirListNode(T x) : val(x), prev(NULL), next(NULL) {}
 };
 
 template <class T>

@@ -129,7 +129,7 @@ vector<T> DumpTree(TreeNode<T> *t) {
 template <typename T>
 ostream &operator<<(ostream &os, const vector<T> &v) {
   os << "[";
-  for (int i = 0; i < v.size(); ++i) {
+  for (size_t i = 0; i < v.size(); ++i) {
     os << v[i];
     if (i != v.size() - 1) os << ", ";
   }
@@ -143,7 +143,16 @@ void DumpVector(vector<T> v) {
 }
 
 // TODO 应该怎么派生TreeNode的类，才能使用上边的工厂函数？
+template ostream &operator<<<int>(ostream &os, const vector<int> &v);
+template ostream &operator<<<vector<int>>(ostream &os,
+                                          const vector<vector<int>> &v);
 
 }  // namespace base
+
+using base::operator<<;
+
+// 输出pair坐标点
+#define COUT_POINT(x) \
+  cout << #x << ": (" << x.first << ", " << x.second << ")" << endl;
 
 #endif

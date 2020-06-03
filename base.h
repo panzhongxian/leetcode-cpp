@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cmath>
 #include <map>
+#include <ostream>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
@@ -123,6 +124,22 @@ vector<T> DumpTree(TreeNode<T> *t) {
   if (!t) return vector<T>();
 
   // vector<T*>
+}
+
+template <typename T>
+ostream &operator<<(ostream &os, const vector<T> &v) {
+  os << "[";
+  for (int i = 0; i < v.size(); ++i) {
+    os << v[i];
+    if (i != v.size() - 1) os << ", ";
+  }
+  os << "]";
+  return os;
+}
+
+template <class T>
+void DumpVector(vector<T> v) {
+  cout << v;
 }
 
 // TODO 应该怎么派生TreeNode的类，才能使用上边的工厂函数？

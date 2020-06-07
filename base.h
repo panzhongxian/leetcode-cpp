@@ -5,6 +5,7 @@
 #include <cmath>
 #include <map>
 #include <ostream>
+#include <stack>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
@@ -154,5 +155,8 @@ using base::operator<<;
 // 输出pair坐标点
 #define COUT_POINT(x) \
   cout << #x << ": (" << x.first << ", " << x.second << ")" << endl;
+
+#define COUT_VALUE(x) cout << #x << ": " << x << endl;
+#define COUT_PAIR(x, y) cout << "[" << x << "," << y << "]" << endl;
 
 #endif

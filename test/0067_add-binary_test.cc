@@ -1,4 +1,4 @@
-#include "0067_add_binary.h"
+#include "0067_add-binary.h"
 
 TEST(S, Demo) {
   Solution s;

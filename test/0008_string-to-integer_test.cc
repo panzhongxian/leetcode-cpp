@@ -1,4 +1,4 @@
-#include "0008_string_to_integer.h"
+#include "0008_string-to-integer.h"
 
 TEST(S, Demo) {
   Solution s;

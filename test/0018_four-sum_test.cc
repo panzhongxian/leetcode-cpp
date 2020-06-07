@@ -1,4 +1,4 @@
-#include "0018_four_sum.h"
+#include "0018_four-sum.h"
 
 TEST(S, Demo) {
   Solution s;

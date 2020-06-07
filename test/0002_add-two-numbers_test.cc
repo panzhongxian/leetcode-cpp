@@ -1,4 +1,4 @@
-#include "0002_add_two_numbers.h"
+#include "0002_add-two-numbers.h"
 
 TEST(S, Demo) {
   Solution s;

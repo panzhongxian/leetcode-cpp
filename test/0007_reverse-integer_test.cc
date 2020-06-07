@@ -1,4 +1,4 @@
-#include "0007_reverse_integer.h"
+#include "0007_reverse-integer.h"
 
 TEST(S, Demo) {
   Solution s;

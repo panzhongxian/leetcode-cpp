@@ -1,4 +1,4 @@
-#include "0015_three_sum.h"
+#include "0015_three-sum.h"
 
 TEST(S, Demo1) {
   Solution s;

@@ -24,6 +24,7 @@ template <class T>
 struct ListNode {
   T val;
   ListNode *next;
+  ListNode() : next(NULL) {}
   ListNode(T x) : val(x), next(NULL) {}
   static ListNode *Factory(const std::initializer_list<T> l) {
     if (l.size() == 0) return nullptr;

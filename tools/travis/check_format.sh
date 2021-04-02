@@ -15,6 +15,8 @@
 set -e
 set -x
 
+/usr/bin/python -m pip install --upgrade pip
+
 # Install buildifier.
 wget -O $HOME/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/2.2.1/buildifier
 chmod +x $HOME/bin/buildifier

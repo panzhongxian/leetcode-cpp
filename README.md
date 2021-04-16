@@ -47,6 +47,10 @@ sh tools/format.sh
 
 ## Coverage
 
+最新的代码覆盖率，请点击 [leetcode-cpp-coverage](https://panzhongxian.github.io/leetcode-cpp-coverage/leetcode-cpp/src/index.html).
+
+如果自己需要做覆盖率测试，请详细越多以下内容：
+
 Bazel 目前不能支持对高版本 GCC 9 的覆盖率测试和转换，目前[bazelbuild/bazel#9406](https://github.com/bazelbuild/bazel/issues/9406)该Issue还处于Open状态。
 
 这里提供了一个 GCC 7 的编译环境，用于测试覆盖率。因此现需要构建一个Docker镜像：

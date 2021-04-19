@@ -27,15 +27,15 @@
 - **`.h`文件的命名方式**需要遵循：`{补0的4位编号}_{题目URL中的Path}.h`，如第一题命名为`0001_two-sum.h`
 - **`_test.cc`文件命名方式**需要遵循：`{补0的4位编号}_{题目URL中的Path}_test.cc`，如第一题的命名为`0001_two-sum_test.cc`
 
-- 建议**.h**文件中include自己需要的头文件([Make header files self-sufficient](https://www.oreilly.com/library/view/c-coding-standards/0321113586/ch24.html))
-- 测试**.cc**文件需要`#include "base.h"`，base.h中包括引用常用库、树等结构模板定义、打印向量等辅助函数
-- 测试**.cc**文件使用 [GoogleTest](https://github.com/google/googletest)，不需写`main()`函数
+- 建议 **`.h`** 文件中include自己需要的头文件([Make header files self-sufficient](https://www.oreilly.com/library/view/c-coding-standards/0321113586/ch24.html))
+- 测试 **`.cc`** 文件需要`#include "base.h"`，base.h中包括引用常用库、树等结构模板定义、打印向量等辅助函数
+- 测试 **`.cc`** 文件使用 [GoogleTest](https://github.com/google/googletest)，不需写`main()`函数
 - 如果要测试所有的题目，使用 `bazel test //...`
 
-- **`.h`**文件如果需要使用`TreeNode`等数据结构，需要实例化模板，如`typedef base::TreeNode<int> Treenode;`
+- **`.h`** 文件如果需要使用`TreeNode`等数据结构，需要实例化模板，如`typedef base::TreeNode<int> Treenode;`
 - 欲打印完整的测试结果可以增加`--test_output=all`在`bazel test`后作为选项
 
-- 如果只创建了`.h`文件，而没有创建的`_test.cc`，待添加的测试文件列表会列到文件**`bazel-bin/no_test_source_files.txt`**中
+- 如果只创建了`.h`文件，而没有创建的`_test.cc`，待添加的测试文件列表会列到文件 **`bazel-bin/no_test_source_files.txt`** 中
 
 
 
@@ -97,7 +97,7 @@ ListNode::Factory({1, 2, 6})
 base::TreeNodeFactory<int>("[1,2,2,3,3,null,null,4,5]")
 ```
 
-同时，**`.h`**文件需要实例化模板，如`typedef base::TreeNode<int> Treenode;`，上边"额外说明"中也有提到。
+同时，**`.h`** 文件需要实例化模板，如`typedef base::TreeNode<int> Treenode;`，上边"额外说明"中也有提到。
 
 
 

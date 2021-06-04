@@ -14,8 +14,8 @@ http_archive(
 # Only needed for benchmarks, not to build the OpenCensus library.
 http_archive(
     name = "com_github_google_benchmark",
-    strip_prefix = "benchmark-master",
-    urls = ["https://github.com/google/benchmark/archive/master.zip"],
+    strip_prefix = "benchmark-main",
+    urls = ["https://github.com/google/benchmark/archive/main.zip"],
 )
 
 # Depend on Abseil.

@@ -1,1 +1,2 @@
 build:linux --cxxopt=-std=c++17
+test --cxxopt=-std=c++17 --cxxopt -DLEETCODE_DEBUG

@@ -8,6 +8,8 @@ http_archive(
     name = "com_google_googletest",
     strip_prefix = "googletest-master",
     urls = ["https://github.com/google/googletest/archive/master.zip"],
+    #strip_prefix = "googletest-703bd9caab50b139428cea1aaff9974ebee5742e",
+    #urls = ["https://github.com/google/googletest/archive/703bd9caab50b139428cea1aaff9974ebee5742e.zip"],
 )
 
 # Google Benchmark library.

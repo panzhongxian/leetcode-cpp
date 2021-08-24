@@ -6,9 +6,9 @@ matrix:
     - os: linux
       name: "check format"
       script: tools/travis/check_format.sh
-    - os: linux
-      env: BAZEL_OS=linux
-      script: tools/travis/build_bazel.sh
+        #    - os: linux
+        #      env: BAZEL_OS=linux
+        #      script: tools/travis/build_bazel.sh
     - os: linux
       compiler: gcc
       env: BAZEL_OS=linux

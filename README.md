@@ -102,7 +102,7 @@ base::TreeNodeFactory<int>("[1,2,2,3,3,null,null,4,5]")
 
 
 
-[travis-image]: https://travis-ci.org/panzhongxian/leetcode-cpp.svg?branch=master
-[travis-url]: https://travis-ci.org/panzhongxian/leetcode-cpp
+[travis-image]: https://app.travis-ci.com/panzhongxian/leetcode-cpp.svg?branch=master
+[travis-url]: https://app.travis-ci.com/github/panzhongxian/leetcode-cpp
 
 

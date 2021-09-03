@@ -21,8 +21,12 @@ def lc_deps():
     native.cc_library(
         name = "base",
         srcs = [
-            "base.cc",
-            "base.h",
+            "utils/base.cc",
+        ],
+        strip_include_prefix = "utils",
+        hdrs = [
+            "utils/base.h",
+            "utils/nested_integer.h",
         ],
         deps = [
             "@com_github_google_benchmark//:benchmark",

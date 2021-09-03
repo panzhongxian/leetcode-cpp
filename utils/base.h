@@ -39,6 +39,19 @@ struct ListNode {
     }
     return ret;
   }
+  static ListNode *Factory(const std::vector<T> l) {
+    if (l.size() == 0) return nullptr;
+    auto iter = l.begin();
+    ListNode *cur = new ListNode(*iter);
+    ListNode *ret = cur;
+    ++iter;
+    while (iter != l.end()) {
+      cur->next = new ListNode(*iter);
+      cur = cur->next;
+      ++iter;
+    }
+    return ret;
+  }
   static vector<T> Dump(ListNode *head) {
     vector<T> ret;
     while (head) {

@@ -1,2 +1,3 @@
 bazel-*
 *.h.gch
+*.o

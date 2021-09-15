@@ -4,13 +4,13 @@
 #include <cassert>
 #include <variant>
 #include <vector>
+
 class NestedInteger final {
  public:
   NestedInteger(int i) : value(i) {}
-  NestedInteger(std::initializer_list<NestedInteger> xs) : value(xs) {}
+  NestedInteger(std::initializer_list<NestedInteger> ni) : value(ni) {}
 
   inline bool isInteger() const { return std::holds_alternative<int>(value); }
-
   inline int getInteger() const {
     assert(std::holds_alternative<int>(value));
     return std::get<int>(value);

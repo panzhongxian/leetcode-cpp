@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
-
-using std::string;
+#include "base.h"
 
 class Solution {
  public:

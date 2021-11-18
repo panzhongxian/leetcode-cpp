@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   // direction = 0 : left -> right

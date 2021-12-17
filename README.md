@@ -10,14 +10,12 @@
 
 **欢迎大家能提Pull Request，贡献测试用例和其他工具，为更多的人提供便利。**
 
-
-
 ## 使用方法
 
 只需三步，即可编译和测试自己待提交的代码：
 
-1. 创建**代码文件 (`.h`文件)**，存到`src/`目录，就是用于提交到 LeetCode 页面的Solution实现代码。
-2. 创建**测试文件 (`_test.cc`文件)**，存到`test/`目录。目前已经添加了80多道题目的测试文件，可以自己仿照添加，更欢迎提PR贡献到项目中。
+1. 创建**代码文件 (`.h`文件)**，存到 `src/` 目录，就是用于提交到 LeetCode 页面的Solution实现代码。
+2. 创建**测试文件 (`_test.cc`文件) **，存到 `test/` 目录。目前已经添加了80多道题目的测试文件，可以自己仿照添加，更欢迎提PR贡献到项目中。
 3. 编译并运行测试`bazel test //:0001_two-sum_test`。
 
 点击查看本项目题解的**覆盖率报告**，点击 [leetcode-cpp-coverage](https://panzhongxian.github.io/leetcode-cpp-coverage/leetcode-cpp/src/index.html)。如果要自己要生成覆盖率报告，参考下边覆盖率报告小节。
@@ -38,48 +36,53 @@
 - 如果只创建了`.h`文件，而没有创建的`_test.cc`，待添加的测试文件列表会列到文件 **`bazel-bin/no_test_source_files.txt`** 中
 
 
+## 使用镜像
+
+本项目中提供了一个 GCC 7 的编译环境镜像，用于进行后续的代码格式化、覆盖率报告生成、持续集成。
+
+需要构建一个 Docker 镜像：
+
+```bash
+cd leetcode-cpp
+docker build -t ltcd tools/docker
+# 如果在内网有代理需要携带参数:
+# docker build -t --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy ltcd tools/docker
+```
+
+*Bazel 目前不能支持对高版本 GCC 9 的覆盖率测试和转换，目前[bazelbuild/bazel#9406](https://github.com/bazelbuild/bazel/issues/9406)该Issue还处于Open状态。*
+
 
 ## 格式化代码
 
- 脚本 `tools/format.sh` 是用于格式化`.h`、`.cc`、`BUILD`文件的工具，需要在项目根目录下执行：
+如果你使用 clang-format 等本地工具，可以直接利用根目录下的 `.clang-format` 配置文件进行格式化。
+
+脚本 `tools/format.sh` 是用于批量格式化`.h`、`.cc`、`BUILD`文件的工具，需要在项目根目录下执行：
 
 ```bash
-cd leetcode-cpp
-sh tools/format.sh
+docker run -v $PWD:/leetcode-cpp -t -i ltcd /bin/sh -c "cd leetcode-cpp && bash tools/format.sh"
+# 如果在内网有代理需要携带参数:
+# docker run -v $PWD:/leetcode-cpp -e http_proxy=$http_proxy -e https_proxy=$https_proxy -t -i ltcd /bin/sh -c "cd leetcode-cpp && bash tools/format.sh"
 ```
-
-
 
 ## 覆盖率报告
-
-Bazel 目前不能支持对高版本 GCC 9 的覆盖率测试和转换，目前[bazelbuild/bazel#9406](https://github.com/bazelbuild/bazel/issues/9406)该Issue还处于Open状态。
-
-本项目中提供了一个 GCC 7 的编译环境，用于测试覆盖率。先需要构建一个Docker镜像：
-
-```bash
-cd leetcode-cpp
-docker build --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy -t ubuntu:18.04 tools/docker
-```
 
 构建完成后，可以运行覆盖率测试的脚本：
 
 ```bash
-docker run -v $PWD:/leetcode-cpp -e http_proxy=$http_proxy -e https_proxy=$https_proxy -t -i ubuntu:18.04 /bin/sh -c "cd leetcode-cpp && tools/coverage.sh"
+docker run -v $PWD:/leetcode-cpp -t -i ltcd /bin/sh -c "cd leetcode-cpp && bash tools/coverage.sh"
+# 如果在内网有代理需要携带参数:
+# docker run -v $PWD:/leetcode-cpp -e http_proxy=$http_proxy -e https_proxy=$https_proxy -t -i ltcd /bin/sh -c "cd leetcode-cpp && bash tools/coverage.sh"
 ```
 
 生成的覆盖率报告将存放在`bazel-coverage`目录下，格式为HTML，形式如下：
 
 ![Coverage HTML](pic/lcov-coverage.png)
 
-
-
 ## 持续集成
 
 本项目使用[Travis CI](https://travis-ci.org/)，每次Commit后，均会出发一次构建，会检查代码格式、编译、测试三个方面是否通过。
 
 配置文件为根目录下的`.travis.yml`文件，感兴趣的同学可以点击这个图标 [![Travis Build Status][travis-image]][travis-url] 查看。
-
-
 
 ## 辅助模板
 
@@ -98,8 +101,6 @@ base::TreeNodeFactory<int>("[1,2,2,3,3,null,null,4,5]")
 ```
 
 同时，**`.h`** 文件需要实例化模板，如`typedef base::TreeNode<int> Treenode;`，上边"额外说明"中也有提到。
-
-
 
 
 [travis-image]: https://app.travis-ci.com/panzhongxian/leetcode-cpp.svg?branch=master

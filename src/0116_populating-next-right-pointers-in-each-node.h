@@ -4,19 +4,19 @@ typedef base::TreeNode<int> Node;
 
 class Solution {
  public:
-  Node *connect(Node *root) {
+  Node* connect(Node* root) {
     if (!root) {
       return root;
     }
 
-    vector<Node *> level_traversal({root});
+    vector<Node*> level_traversal({root});
 
     int start_idx = 0;
     int end_idx;
 
     while (start_idx < level_traversal.size()) {
       end_idx = level_traversal.size();
-      Node *cur_node;
+      Node* cur_node;
       for (size_t i = start_idx; i < end_idx; ++i) {
         cur_node = level_traversal[i];
 

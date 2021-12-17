@@ -1,7 +1,7 @@
 #include "base.h"
 class Solution {
  public:
-  int CheckOddPalindrome(const string &s, int i) {
+  int CheckOddPalindrome(const string& s, int i) {
     int n = 1;
     int s_len = s.size();
     for (; i + n < s_len && i - n >= 0; ++n) {
@@ -12,7 +12,7 @@ class Solution {
     return n - 1;
   }
 
-  int CheckEvenPalindrome(const string &s, int i) {
+  int CheckEvenPalindrome(const string& s, int i) {
     int n = 0;
     int s_len = s.size();
     for (; i + n < s_len - 1 && i - n >= 0; ++n) {

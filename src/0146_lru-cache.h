@@ -12,7 +12,7 @@ class DoubleLinkedList {
     length = 0;
   }
 
-  BiDirListNode *GetTail() {
+  BiDirListNode* GetTail() {
     if (length == 0) {
       return nullptr;
     }
@@ -22,7 +22,7 @@ class DoubleLinkedList {
   bool IsFull() { return capacity == length; }
 
   // return whethe it is full;
-  void PushHead(BiDirListNode *node) {
+  void PushHead(BiDirListNode* node) {
     node->next = head->next;
     node->prev = head;
     head->next = node;
@@ -37,7 +37,7 @@ class DoubleLinkedList {
       length++;
     }
   }
-  void MoveToHead(BiDirListNode *node) {
+  void MoveToHead(BiDirListNode* node) {
     auto prev = node->prev;
     auto next = node->next;
     next->prev = prev;
@@ -47,8 +47,8 @@ class DoubleLinkedList {
   }
 
  private:
-  BiDirListNode *head;
-  BiDirListNode *tail;
+  BiDirListNode* head;
+  BiDirListNode* tail;
   int capacity;
   int length;
 };
@@ -84,6 +84,6 @@ class LRUCache {
   }
 
  private:
-  DoubleLinkedList *list;
-  map<int, BiDirListNode *> kv;
+  DoubleLinkedList* list;
+  map<int, BiDirListNode*> kv;
 };

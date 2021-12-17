@@ -1,6 +1,6 @@
 class Solution {
  public:
-  pair<int, int> xx(TreeNode *root) {
+  pair<int, int> xx(TreeNode* root) {
     int sum = 0;
     int tilt = 0;
     if (root == nullptr) {
@@ -22,5 +22,5 @@ class Solution {
     sum = sum_left + sum_right + root->val;
     return pair<int, int>(sum, tilt);
   }
-  int findTilt(TreeNode *root) { return xx(root).second; }
+  int findTilt(TreeNode* root) { return xx(root).second; }
 };

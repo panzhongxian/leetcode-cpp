@@ -1,8 +1,8 @@
 class Solution {
  public:
-  bool isPrefixString(string s, vector<string> &words) {
+  bool isPrefixString(string s, vector<string>& words) {
     int shift = 0;
-    for (auto &word : words) {
+    for (auto& word : words) {
       if (shift == s.size()) {
         return true;
       }

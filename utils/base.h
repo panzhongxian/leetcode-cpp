@@ -24,14 +24,14 @@ namespace base {
 template <class T>
 struct ListNode {
   T val;
-  ListNode *next;
+  ListNode* next;
   ListNode() : next(NULL) {}
   ListNode(T x) : val(x), next(NULL) {}
-  static ListNode *Factory(const std::initializer_list<T> l) {
+  static ListNode* Factory(const std::initializer_list<T> l) {
     if (l.size() == 0) return nullptr;
     auto iter = l.begin();
-    ListNode *cur = new ListNode(*iter);
-    ListNode *ret = cur;
+    ListNode* cur = new ListNode(*iter);
+    ListNode* ret = cur;
     ++iter;
     while (iter != l.end()) {
       cur->next = new ListNode(*iter);
@@ -40,11 +40,11 @@ struct ListNode {
     }
     return ret;
   }
-  static ListNode *Factory(const std::vector<T> l) {
+  static ListNode* Factory(const std::vector<T> l) {
     if (l.size() == 0) return nullptr;
     auto iter = l.begin();
-    ListNode *cur = new ListNode(*iter);
-    ListNode *ret = cur;
+    ListNode* cur = new ListNode(*iter);
+    ListNode* ret = cur;
     ++iter;
     while (iter != l.end()) {
       cur->next = new ListNode(*iter);
@@ -53,7 +53,7 @@ struct ListNode {
     }
     return ret;
   }
-  static vector<T> Dump(ListNode *head) {
+  static vector<T> Dump(ListNode* head) {
     vector<T> ret;
     while (head) {
       ret.push_back(head->val);
@@ -67,8 +67,8 @@ struct ListNode {
 template <class T>
 struct BiDirListNode {
   T val;
-  BiDirListNode *prev;
-  BiDirListNode *next;
+  BiDirListNode* prev;
+  BiDirListNode* next;
   BiDirListNode() : prev(NULL), next(NULL) {}
   BiDirListNode(T x) : val(x), prev(NULL), next(NULL) {}
 };
@@ -77,19 +77,19 @@ template <class T>
 class TreeNode {
  public:
   T val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode *next;
+  TreeNode* left;
+  TreeNode* right;
+  TreeNode* next;
   TreeNode() : val(0), left(nullptr), right(nullptr), next(nullptr) {}
   TreeNode(T x) : val(x), left(nullptr), right(nullptr), next(nullptr) {}
-  TreeNode(T x, TreeNode *left, TreeNode *right)
+  TreeNode(T x, TreeNode* left, TreeNode* right)
       : val(x), left(left), right(right) {}
 };
 
 template <class T>
-TreeNode<T> *TreeNodeFactory(const std::string &input) {
+TreeNode<T>* TreeNodeFactory(const std::string& input) {
   absl::string_view list_str(input);
-  vector<TreeNode<T> *> level_traversal;
+  vector<TreeNode<T>*> level_traversal;
 
   absl::ConsumePrefix(&list_str, "[");
   absl::ConsumeSuffix(&list_str, "]");
@@ -114,7 +114,7 @@ TreeNode<T> *TreeNodeFactory(const std::string &input) {
 
   size_t cur_root_idx = 0;
   int node_pos = 0;  // 0: left,  1: right
-  TreeNode<T> *cur_root;
+  TreeNode<T>* cur_root;
   for (size_t i = 1; i < level_traversal.size(); ++i) {
     cur_root = level_traversal[cur_root_idx];
 
@@ -136,14 +136,14 @@ TreeNode<T> *TreeNodeFactory(const std::string &input) {
 }
 
 template <class T>
-vector<T> DumpTree(TreeNode<T> *t) {
+vector<T> DumpTree(TreeNode<T>* t) {
   if (!t) return vector<T>();
 
   // vector<T*>
 }
 
 template <typename T>
-ostream &operator<<(ostream &os, const vector<T> &v) {
+ostream& operator<<(ostream& os, const vector<T>& v) {
   os << "[";
   for (size_t i = 0; i < v.size(); ++i) {
     os << v[i];
@@ -159,9 +159,9 @@ void DumpVector(vector<T> v) {
 }
 
 // TODO 应该怎么派生TreeNode的类，才能使用上边的工厂函数？
-template ostream &operator<<<int>(ostream &os, const vector<int> &v);
-template ostream &operator<<<vector<int>>(ostream &os,
-                                          const vector<vector<int>> &v);
+template ostream& operator<<<int>(ostream& os, const vector<int>& v);
+template ostream& operator<<<vector<int>>(ostream& os,
+                                          const vector<vector<int>>& v);
 
 }  // namespace base
 

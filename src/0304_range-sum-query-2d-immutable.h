@@ -2,7 +2,7 @@
 
 class NumMatrix {
  public:
-  NumMatrix(vector<vector<int>> &matrix) : empty_vector_flag(false) {
+  NumMatrix(vector<vector<int>>& matrix) : empty_vector_flag(false) {
     int m = matrix.size();
     if (m == 0) {
       empty_vector_flag = true;

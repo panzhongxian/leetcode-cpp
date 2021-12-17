@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool is_equal_tree(TreeNode *t1, TreeNode *t2) {
+  bool is_equal_tree(TreeNode* t1, TreeNode* t2) {
     if (t1 == nullptr) {
       return t2 == nullptr;
     }
@@ -11,7 +11,7 @@ class Solution {
     return t1->val == t2->val && is_equal_tree(t1->left, t2->left) &&
            is_equal_tree(t1->right, t2->right);
   }
-  bool isSubtree(TreeNode *root, TreeNode *subRoot) {
+  bool isSubtree(TreeNode* root, TreeNode* subRoot) {
     if (root == nullptr) {
       return false;
     }

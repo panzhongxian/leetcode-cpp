@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<int> luckyNumbers(vector<vector<int>> &matrix) {
+  vector<int> luckyNumbers(vector<vector<int>>& matrix) {
     vector<int> ret;
     set<pair<int, int>> min_num_locations;
     for (int i = 0; i < matrix.size(); i++) {
@@ -15,7 +15,7 @@ class Solution {
       min_num_locations.insert(pair<int, int>(i, min_num_j));
     }
 
-    for (const auto &ij : min_num_locations) {
+    for (const auto& ij : min_num_locations) {
       if ([&matrix, &ij]() {
             for (int i = 0; i < matrix.size(); i++) {
               if (matrix[i][ij.second] > matrix[ij.first][ij.second]) {

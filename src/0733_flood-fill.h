@@ -5,7 +5,7 @@ struct PointWithOrigin {
 
 class Solution {
  public:
-  vector<vector<int>> floodFill(vector<vector<int>> &image, int sr, int sc,
+  vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc,
                                 int newColor) {
     if (image[sr][sc] == newColor) {
       return image;
@@ -15,7 +15,7 @@ class Solution {
     q.push(PointWithOrigin{sr, sc});
 
     while (!q.empty()) {
-      auto &p = q.front();
+      auto& p = q.front();
       if (p.i > 0 && image[p.i - 1][p.j] == old_color) {
         q.push(PointWithOrigin{p.i - 1, p.j});
       }

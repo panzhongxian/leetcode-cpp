@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool check_is_palindrome(const string &s, int &l, int &r) {
+  bool check_is_palindrome(const string& s, int& l, int& r) {
     bool is_palindrome = true;
     while (l < r) {
       if (s[l] != s[r]) {

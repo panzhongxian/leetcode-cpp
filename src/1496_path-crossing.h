@@ -2,7 +2,7 @@ namespace std {
 typedef pair<int, int> Domino;
 template <>
 struct hash<Domino> {
-  std::size_t operator()(const Domino &k) const {
+  std::size_t operator()(const Domino& k) const {
     using std::hash;
     return hash<int>()(k.first) ^ (hash<int>()(k.second) << 1);
   }

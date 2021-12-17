@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<string> findRelativeRanks(vector<int> &score) {
+  vector<string> findRelativeRanks(vector<int>& score) {
     vector<string> ret(score.size());
     map<int, int> m;
     for (int i = 0; i < score.size(); i++) {
@@ -8,7 +8,7 @@ class Solution {
     }
 
     int i = 1;
-    for (auto &kv : m) {
+    for (auto& kv : m) {
       switch (i) {
         case 1:
           ret[kv.second] = "Gold Medal";

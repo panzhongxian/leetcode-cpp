@@ -3,7 +3,7 @@ typedef base::ListNode<int> ListNode;
 
 class Solution {
  public:
-  ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+  ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     if (!l1 && !l2) {
       return nullptr;
     }
@@ -12,7 +12,7 @@ class Solution {
     p1 = l1;
     p2 = l2;
 
-    ListNode *ret = new ListNode(0);
+    ListNode* ret = new ListNode(0);
     cur = ret;
 
     int carry = 0;
@@ -26,7 +26,7 @@ class Solution {
       p2 = p2->next;
     }
 
-    ListNode *p = p1 ? p1 : p2;
+    ListNode* p = p1 ? p1 : p2;
     while (p) {
       cur->next = new ListNode(0);
       cur = cur->next;

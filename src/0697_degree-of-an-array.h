@@ -6,7 +6,7 @@ class Solution {
     int cnt;
   };
 
-  int findShortestSubArray(vector<int> &nums) {
+  int findShortestSubArray(vector<int>& nums) {
     int max_freq = 0;
     unordered_map<int, Counter> m;
 
@@ -23,7 +23,7 @@ class Solution {
       }
     }
     int ret = INT_MAX;
-    for (auto &kv : m) {
+    for (auto& kv : m) {
       if (kv.second.cnt != max_freq) {
         continue;
       }

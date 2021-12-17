@@ -4,15 +4,15 @@ typedef base::ListNode<int> ListNode;
 
 class Solution {
  public:
-  bool hasCycle(ListNode *head) {
+  bool hasCycle(ListNode* head) {
     if (head == nullptr) {
       return false;
     }
 
-    ListNode *fake_head = new ListNode;
+    ListNode* fake_head = new ListNode;
     fake_head->next = head;
-    ListNode *p1 = fake_head;
-    ListNode *p2 = fake_head;
+    ListNode* p1 = fake_head;
+    ListNode* p2 = fake_head;
 
     size_t diff = 0;
     do {

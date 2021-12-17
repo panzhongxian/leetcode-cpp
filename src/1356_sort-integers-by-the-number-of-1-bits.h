@@ -10,7 +10,7 @@ class Solution {
     }
     return ret;
   }
-  vector<int> sortByBits(vector<int> &arr) {
+  vector<int> sortByBits(vector<int>& arr) {
     map<int, vector<int>> m;
     for (int i : arr) {
       auto bit_cnt = count_bit(i);
@@ -21,7 +21,7 @@ class Solution {
       }
     }
     vector<int> ret;
-    for (auto &kv : m) {
+    for (auto& kv : m) {
       sort(kv.second.begin(), kv.second.end());
       ret.insert(ret.end(), make_move_iterator(kv.second.begin()),
                  make_move_iterator(kv.second.end()));

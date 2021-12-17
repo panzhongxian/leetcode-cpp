@@ -2,7 +2,7 @@
 
 class Solution {
  public:
-  string SimplifyString(const string &s) {
+  string SimplifyString(const string& s) {
     vector<char> stack;
     for (auto c : s) {
       switch (c) {
@@ -58,7 +58,7 @@ class Solution {
       char c = s[i];
       cur_sub_str_weight.clear();
       if (c == '*') {
-        for (auto &it : pre_sub_str_weight) {
+        for (auto& it : pre_sub_str_weight) {
           if (it.second + 1 <= len - i) {
             cur_sub_str_weight[it.first] = it.second;
           }
@@ -66,7 +66,7 @@ class Solution {
       }
 
       if (c == '(' || c == '*') {
-        for (auto &it : pre_sub_str_weight) {
+        for (auto& it : pre_sub_str_weight) {
           if (it.second + 1 <= len - i) {
             cur_sub_str_weight[it.first + "("] = it.second + 1;
           }
@@ -74,7 +74,7 @@ class Solution {
       }
 
       if (c == ')' || c == '*') {
-        for (auto &it : pre_sub_str_weight) {
+        for (auto& it : pre_sub_str_weight) {
           if (it.second > 0) {
             cur_sub_str_weight[it.first + ")"] = it.second - 1;
           }
@@ -84,7 +84,7 @@ class Solution {
       pre_sub_str_weight = cur_sub_str_weight;
     }
 
-    for (auto &it : pre_sub_str_weight) {
+    for (auto& it : pre_sub_str_weight) {
       if (it.second == 0) {
         return true;
       }

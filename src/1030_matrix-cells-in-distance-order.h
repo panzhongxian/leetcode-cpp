@@ -51,9 +51,9 @@ class Solution {
     queue<Node> q;
     q.push(Node(rCenter, cCenter));
     while (!q.empty()) {
-      auto &node = q.front();
+      auto& node = q.front();
       vector<Node> v = node.get_next_nodes();
-      for (auto &n : v) {
+      for (auto& n : v) {
         if (n.i >= 0 && n.i < rows && n.j >= 0 && n.j < cols) {
           q.push(n);
         }

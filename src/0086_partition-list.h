@@ -4,11 +4,11 @@ typedef base::ListNode<int> ListNode;
 
 class Solution {
  public:
-  ListNode *partition(ListNode *head, int x) {
-    ListNode *left_head = new ListNode;
-    ListNode *right_head = new ListNode;
-    ListNode *left_tail = left_head;
-    ListNode *right_tail = right_head;
+  ListNode* partition(ListNode* head, int x) {
+    ListNode* left_head = new ListNode;
+    ListNode* right_head = new ListNode;
+    ListNode* left_tail = left_head;
+    ListNode* right_tail = right_head;
 
     while (head) {
       if (head->val < x) {

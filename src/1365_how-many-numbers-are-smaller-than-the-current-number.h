@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<int> smallerNumbersThanCurrent(vector<int> &nums) {
+  vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
     vector<int> sorted_num(nums);
 
     sort(sorted_num.begin(), sorted_num.end());

@@ -11,7 +11,7 @@ class Solution {
       start = end + 1;
       end = s.find(' ', start);
     }
-    for (auto &word : v) {
+    for (auto& word : v) {
       if (word.empty()) {
         break;
       }

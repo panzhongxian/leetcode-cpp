@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool check(vector<int> &nums) {
+  bool check(vector<int>& nums) {
     int breakpoint = -1;
     int prev = INT_MIN;
     for (int i = 0; i < nums.size(); i++) {

@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2) {
+  vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
     stack<int> s;
     map<int, int> m;
     for (int num : nums2) {

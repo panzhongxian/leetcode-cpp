@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<int> get_min_max_and_min_diff(TreeNode *root) {
+  vector<int> get_min_max_and_min_diff(TreeNode* root) {
     int max_val = root->val;
     int min_val = root->val;
     int min_diff = INT_MAX;
@@ -16,7 +16,7 @@ class Solution {
     }
     return vector<int>{min_val, max_val, min_diff};
   }
-  int getMinimumDifference(TreeNode *root) {
+  int getMinimumDifference(TreeNode* root) {
     return get_min_max_and_min_diff(root)[2];
   }
 };

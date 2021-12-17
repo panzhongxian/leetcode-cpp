@@ -1,15 +1,15 @@
 class Solution {
  public:
-  int countWords(vector<string> &words1, vector<string> &words2) {
+  int countWords(vector<string>& words1, vector<string>& words2) {
     unordered_map<string, int> m1, m2;
-    for (auto &word : words1) {
+    for (auto& word : words1) {
       m1[word]++;
     }
-    for (auto &word : words2) {
+    for (auto& word : words2) {
       m2[word]++;
     }
     int ret = 0;
-    for (auto &kv : m1) {
+    for (auto& kv : m1) {
       if (kv.second > 1) {
         continue;
       }

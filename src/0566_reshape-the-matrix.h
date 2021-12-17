@@ -2,7 +2,7 @@
 
 class Solution {
  public:
-  vector<vector<int>> matrixReshape(vector<vector<int>> &mat, int r, int c) {
+  vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {
     if (mat.empty() || mat[0].size() * mat.size() != r * c) {
       return mat;
     }

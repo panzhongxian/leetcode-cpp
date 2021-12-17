@@ -1,9 +1,9 @@
 class Solution {
  public:
-  bool makeEqual(vector<string> &words) {
+  bool makeEqual(vector<string>& words) {
     int m[26];
     memset(m, 0, 26 * sizeof(int));
-    for (auto &word : words) {
+    for (auto& word : words) {
       for (char c : word) {
         m[c - 'a']++;
       }

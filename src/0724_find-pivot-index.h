@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int pivotIndex(vector<int> &nums) {
+  int pivotIndex(vector<int>& nums) {
     vector<int> sum_left(nums.size(), 0);
     vector<int> sum_right(nums.size(), 0);
 

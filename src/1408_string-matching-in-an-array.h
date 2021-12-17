@@ -1,11 +1,11 @@
 class Solution {
  public:
-  vector<string> stringMatching(vector<string> &words) {
+  vector<string> stringMatching(vector<string>& words) {
     vector<string> ret;
     if (words.empty()) {
       return ret;
     }
-    sort(words.begin(), words.end(), [](const string &s1, const string &s2) {
+    sort(words.begin(), words.end(), [](const string& s1, const string& s2) {
       return s1.size() < s2.size();
     });
     for (int i = 0; i < words.size() - 1; i++) {

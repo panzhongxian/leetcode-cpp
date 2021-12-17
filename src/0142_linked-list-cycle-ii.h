@@ -4,7 +4,7 @@ typedef base::ListNode<int> ListNode;
 
 class Solution {
  public:
-  int CalcLength(ListNode *head) {
+  int CalcLength(ListNode* head) {
     int len = 0;
     while (head->next) {
       len++;
@@ -13,15 +13,15 @@ class Solution {
     return len;
   }
 
-  ListNode *detectCycle(ListNode *head) {
+  ListNode* detectCycle(ListNode* head) {
     if (head == nullptr) {
       return nullptr;
     }
 
-    ListNode *fake_head_1 = new ListNode(0);
+    ListNode* fake_head_1 = new ListNode(0);
     fake_head_1->next = head;
-    ListNode *p1 = fake_head_1;
-    ListNode *p2 = fake_head_1;
+    ListNode* p1 = fake_head_1;
+    ListNode* p2 = fake_head_1;
 
     do {
       p2 = p2->next;
@@ -49,7 +49,7 @@ class Solution {
       return p1;
     }
 
-    ListNode *new_head = p1->next;
+    ListNode* new_head = p1->next;
     p1->next = nullptr;
 
     int len1 = CalcLength(head);

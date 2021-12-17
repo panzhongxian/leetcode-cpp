@@ -1,6 +1,6 @@
 class Solution {
  public:
-  static bool check_repeate(string &str, int n) {
+  static bool check_repeate(string& str, int n) {
     if (str.size() % n != 0) {
       return false;
     }

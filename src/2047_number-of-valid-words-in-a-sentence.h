@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool validate(string &s) {
+  bool validate(string& s) {
     int letter_cnt = 0;
     int hyphen_cnt = 0;
     int punctuation_cnt = 0;

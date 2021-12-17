@@ -7,7 +7,7 @@ class Solution {
     return 1 << m[c];
   }
 
-  size_t get_next_longest_vowel_substr(const string &s, string *vowel_substr,
+  size_t get_next_longest_vowel_substr(const string& s, string* vowel_substr,
                                        size_t pos) {
     if (pos == string::npos) {
       *vowel_substr = "";
@@ -24,7 +24,7 @@ class Solution {
     return pos;
   }
 
-  int count_all_vowel_substr(const string &s) {
+  int count_all_vowel_substr(const string& s) {
     if (s.size() < 5) {
       return 0;
     }

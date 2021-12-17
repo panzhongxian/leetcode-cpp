@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int countKDifference(vector<int> &nums, int k) {
+  int countKDifference(vector<int>& nums, int k) {
     map<int, int> m;
     for (int i = 0; i < nums.size(); i++) {
       if (m.find(nums[i]) == m.end()) {
@@ -11,7 +11,7 @@ class Solution {
     }
 
     int ret = 0;
-    for (auto &kv : m) {
+    for (auto& kv : m) {
       if (k == 0) {
         ret += kv.second * (kv.second - 1);
         continue;

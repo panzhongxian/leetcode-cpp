@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int findLHS(vector<int> &nums) {
+  int findLHS(vector<int>& nums) {
     unordered_map<int, int> m;
     for (auto num : nums) {
       if (m.find(num) == m.end()) {

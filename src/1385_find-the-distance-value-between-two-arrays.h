@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int findTheDistanceValue(vector<int> &arr1, vector<int> &arr2, int d) {
+  int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {
     set<int> s;
     for (int i : arr2) {
       s.insert(i);

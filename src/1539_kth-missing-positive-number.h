@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int findKthPositive(vector<int> &arr, int k) {
+  int findKthPositive(vector<int>& arr, int k) {
     int counter = 1;
     int missed_num = 0;
     for (int i = 0; i < arr.size();) {

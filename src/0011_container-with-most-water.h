@@ -6,12 +6,12 @@ class Solution {
    * https://zhuanlan.zhihu.com/p/33737430
    */
 
-  int calcCapacity(const vector<int> &height, int i, int j) {
+  int calcCapacity(const vector<int>& height, int i, int j) {
     assert(j >= i);
     return (j - i) * min(height[i], height[j]);
   }
 
-  int maxArea(const vector<int> &height) {
+  int maxArea(const vector<int>& height) {
     int i, j;
     i = 0;
     j = height.size() - 1;

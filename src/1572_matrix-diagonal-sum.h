@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int diagonalSum(vector<vector<int>> &mat) {
+  int diagonalSum(vector<vector<int>>& mat) {
     int upper_limit = mat.size() >> 1;
     int ret = 0;
     for (int i = 0; i < upper_limit; i++) {

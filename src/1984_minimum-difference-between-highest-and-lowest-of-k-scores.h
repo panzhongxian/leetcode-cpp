@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int minimumDifference(vector<int> &nums, int k) {
+  int minimumDifference(vector<int>& nums, int k) {
     if (k == 1) {
       return 0;
     }

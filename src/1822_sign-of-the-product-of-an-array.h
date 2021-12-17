@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int arraySign(vector<int> &nums) {
+  int arraySign(vector<int>& nums) {
     bool minus_flag = false;
 
     for (int n : nums) {

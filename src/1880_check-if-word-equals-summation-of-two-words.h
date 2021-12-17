@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int64_t word_value(const string &s) {
+  int64_t word_value(const string& s) {
     int64_t ret = 0;
     for (char c : s) {
       ret = ret * 10 + (c - 'a');

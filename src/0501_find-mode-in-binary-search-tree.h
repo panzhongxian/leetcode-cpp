@@ -1,9 +1,9 @@
 // TO ENHANCE
 class Solution {
  public:
-  vector<int> findMode(TreeNode *root) {
+  vector<int> findMode(TreeNode* root) {
     unordered_map<int, int> m;
-    stack<TreeNode *> s;
+    stack<TreeNode*> s;
     s.push(root);
     int max_occur = INT_MIN;
     while (!s.empty()) {
@@ -19,7 +19,7 @@ class Solution {
       }
     }
     vector<int> ret;
-    for (auto &[k, v] : m) {
+    for (auto& [k, v] : m) {
       if (v == max_occur) {
         ret.push_back(k);
       }

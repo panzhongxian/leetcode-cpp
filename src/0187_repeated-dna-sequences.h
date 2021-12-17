@@ -65,7 +65,7 @@ class Solution {
       counter[cur_num]++;
     }
 
-    for (auto &kv : counter) {
+    for (auto& kv : counter) {
       if (kv.second > 1) {
         ret.push_back(ValueStr(kv.first));
       }

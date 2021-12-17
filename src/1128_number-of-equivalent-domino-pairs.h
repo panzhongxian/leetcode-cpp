@@ -2,7 +2,7 @@ namespace std {
 typedef pair<int, int> Domino;
 template <>
 struct hash<Domino> {
-  std::size_t operator()(const Domino &k) const {
+  std::size_t operator()(const Domino& k) const {
     using std::hash;
     return hash<int>()(k.first) ^ (hash<int>()(k.second) << 1);
   }
@@ -11,9 +11,9 @@ struct hash<Domino> {
 
 class Solution {
  public:
-  int numEquivDominoPairs(vector<vector<int>> &dominoes) {
+  int numEquivDominoPairs(vector<vector<int>>& dominoes) {
     unordered_map<pair<int, int>, int> m;
-    for (auto &v : dominoes) {
+    for (auto& v : dominoes) {
       Domino d;
       if (v[0] > v[1]) {
         d.first = v[1];
@@ -29,7 +29,7 @@ class Solution {
       }
     }
     int ret = 0;
-    for (auto &kv : m) {
+    for (auto& kv : m) {
       if (kv.second > 1) {
         ret += kv.second * (kv.second - 1) / 2;
       }

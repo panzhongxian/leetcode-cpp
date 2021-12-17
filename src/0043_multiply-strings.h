@@ -4,12 +4,12 @@
 using std::string;
 class Solution {
  public:
-  inline void fit_value_carry(int &value, int &carry) {
+  inline void fit_value_carry(int& value, int& carry) {
     carry = value / 10;
     value %= 10;
   }
 
-  string add(const string &num1, const string &num2) {
+  string add(const string& num1, const string& num2) {
     string ret;
     int carry = 0;
     int i = num1.size() - 1;
@@ -40,11 +40,11 @@ class Solution {
   }
 
   string to_string(string num) {
-    std::for_each(num.begin(), num.end(), [](char &c) { c += '0'; });
+    std::for_each(num.begin(), num.end(), [](char& c) { c += '0'; });
     return num;
   }
 
-  string multiply_digit(const string &num1, int digit) {
+  string multiply_digit(const string& num1, int digit) {
     if (digit == 0) {
       return 0;
     }
@@ -70,8 +70,8 @@ class Solution {
       return "0";  // <<==
     }
 
-    std::for_each(num1.begin(), num1.end(), [](char &c) { c -= '0'; });
-    std::for_each(num2.begin(), num2.end(), [](char &c) { c -= '0'; });
+    std::for_each(num1.begin(), num1.end(), [](char& c) { c -= '0'; });
+    std::for_each(num2.begin(), num2.end(), [](char& c) { c -= '0'; });
 
     string ret{0};
     string shift = "";
@@ -82,7 +82,7 @@ class Solution {
       }
       shift.push_back(0);
     }
-    std::for_each(ret.begin(), ret.end(), [](char &c) { c += '0'; });
+    std::for_each(ret.begin(), ret.end(), [](char& c) { c += '0'; });
     return ret;
   }
 };

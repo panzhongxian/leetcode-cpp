@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<int> minSubsequence(vector<int> &nums) {
+  vector<int> minSubsequence(vector<int>& nums) {
     sort(nums.begin(), nums.end());
     int total_sum = 0;
     for (auto num : nums) {

@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<bool> kidsWithCandies(vector<int> &candies, int extraCandies) {
+  vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
     int max_val;
     for (auto n : candies) {
       if (n > max_val) {

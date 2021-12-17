@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<int> targetIndices(vector<int> &nums, int target) {
+  vector<int> targetIndices(vector<int>& nums, int target) {
     int less_than_cnt = 0;
     int target_cnt = 0;
     for (int num : nums) {

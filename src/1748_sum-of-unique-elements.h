@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int sumOfUnique(vector<int> &nums) {
+  int sumOfUnique(vector<int>& nums) {
     unordered_map<int, int> m;
     int ret = 0;
     for (int num : nums) {

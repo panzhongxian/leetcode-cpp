@@ -8,7 +8,7 @@ using std::vector;
 
 class Solution {
  public:
-  vector<int> vector_shift(const vector<int> &v, int n) {
+  vector<int> vector_shift(const vector<int>& v, int n) {
     auto ret(v);
     for (int i = 0; i < n; i++) {
       ret.insert(ret.begin(), 1, 0);
@@ -19,7 +19,7 @@ class Solution {
     return ret;
   }
 
-  void vector_add(vector<int> &v1, const vector<int> &v2) {
+  void vector_add(vector<int>& v1, const vector<int>& v2) {
     int i = 0;
     for (; i < min(v1.size(), v2.size()); i++) {
       v1[i] = v1[i] + v2[i];

@@ -44,7 +44,7 @@ if [[ "$tools_check" == "y" ]]; then
     CMD=clang-format-7
   fi
   $CMD -version
-  $CMD -i -style=Google \
+  $CMD -i -style=file \
     $($FIND -name '*.cc' -print -o -name '*.h' -print)
   if which buildifier >/dev/null; then
     echo "Running buildifier."

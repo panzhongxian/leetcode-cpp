@@ -3,13 +3,13 @@
 class Node {
  public:
   int val;
-  vector<Node *> children;
+  vector<Node*> children;
 
   Node() {}
 
   Node(int _val) { val = _val; }
 
-  Node(int _val, vector<Node *> _children) {
+  Node(int _val, vector<Node*> _children) {
     val = _val;
     children = _children;
   }
@@ -17,13 +17,13 @@ class Node {
 
 class Solution {
  public:
-  vector<int> postorder(Node *root) {
+  vector<int> postorder(Node* root) {
     vector<int> ret;
     if (root == nullptr) {
       return ret;
     }
 
-    stack<Node *> s;
+    stack<Node*> s;
     s.push(root);
     while (!s.empty()) {
       auto current_node = s.top();

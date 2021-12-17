@@ -3,7 +3,7 @@ class Solution {
   inline int suface_of_one_colume(int height) {
     return height == 0 ? 0 : (4 * height + 2);
   }
-  int surfaceArea(vector<vector<int>> &grid) {
+  int surfaceArea(vector<vector<int>>& grid) {
     int ret = 0;
     for (int i = 0; i < grid.size(); i++) {
       for (int j = 0; j < grid.size(); j++) {

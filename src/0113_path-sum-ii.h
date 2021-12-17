@@ -15,14 +15,14 @@ class Solution {
   };
 
  public:
-  vector<vector<int>> pathSum(TreeNode *root, int sum) {
+  vector<vector<int>> pathSum(TreeNode* root, int sum) {
     vector<vector<int>> ret;
     if (!root) {
       // test case (null, 0) -> false
       return ret;
     }
 
-    vector<TreeNode *> level_traversal({root});
+    vector<TreeNode*> level_traversal({root});
     vector<SumSerial> level_traversal_sum_serial({SumSerial(root->val)});
 
     int start_idx = 0;
@@ -30,7 +30,7 @@ class Solution {
 
     while (start_idx < level_traversal.size()) {
       end_idx = level_traversal.size();
-      TreeNode *cur_node;
+      TreeNode* cur_node;
       for (int i = start_idx; i < end_idx; ++i) {
         cur_node = level_traversal[i];
         // SumSerial &cur_node_sum_serial = level_traversal_sum_serial[i];

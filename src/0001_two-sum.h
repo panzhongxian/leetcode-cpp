@@ -1,7 +1,7 @@
 #include "base.h"
 class Solution {
  public:
-  vector<int> twoSum(const vector<int> &nums, int target) {
+  vector<int> twoSum(const vector<int>& nums, int target) {
     unordered_map<int, int> num_idx_mp;
     for (int i = 0; i < nums.size(); ++i) {
       int res = target - nums[i];

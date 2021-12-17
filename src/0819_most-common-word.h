@@ -1,10 +1,10 @@
 class Solution {
  public:
-  string mostCommonWord(string paragraph, vector<string> &banned) {
+  string mostCommonWord(string paragraph, vector<string>& banned) {
     paragraph.push_back('.');
     unordered_set<string> banned_set;
     unordered_map<string, int> stat_map;
-    for (const string &word : banned) {
+    for (const string& word : banned) {
       banned_set.insert(word);
     }
     int p1 = 0;
@@ -21,7 +21,7 @@ class Solution {
       }
 
       string word = paragraph.substr(p1, i - p1);
-      for (char &c : word) {
+      for (char& c : word) {
         if (c >= 'A' && c <= 'Z') {
           c = c - 'A' + 'a';
         }
@@ -34,7 +34,7 @@ class Solution {
     }
     string ret;
     int max_freq = INT_MIN;
-    for (auto &[k, v] : stat_map) {
+    for (auto& [k, v] : stat_map) {
       if (v > max_freq) {
         max_freq = v;
         ret = k;

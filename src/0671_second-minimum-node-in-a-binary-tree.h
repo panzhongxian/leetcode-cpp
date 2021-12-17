@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int findMinLargerValue(TreeNode *root, int val) {
+  int findMinLargerValue(TreeNode* root, int val) {
     if (root == nullptr) {
       return -1;
     }
@@ -26,7 +26,7 @@ class Solution {
     }
   }
 
-  int findSecondMinimumValue(TreeNode *root) {
+  int findSecondMinimumValue(TreeNode* root) {
     return findMinLargerValue(root, root->val);
   }
 };

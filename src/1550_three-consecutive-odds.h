@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool threeConsecutiveOdds(vector<int> &arr) {
+  bool threeConsecutiveOdds(vector<int>& arr) {
     int consecutive_odds_len = 0;
     int flags = 0;
     for (int n : arr) {

@@ -1,6 +1,6 @@
 class Solution {
  public:
-  char nextGreatestLetter(vector<char> &letters, char target) {
+  char nextGreatestLetter(vector<char>& letters, char target) {
     int left = 0;
     int right = letters.size();
     int mid;

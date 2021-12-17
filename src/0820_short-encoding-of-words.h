@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int minimumLengthEncoding(vector<string> &words) {
+  int minimumLengthEncoding(vector<string>& words) {
     unordered_set<string> s(words.begin(), words.end());
     for (string w : s)
       for (int i = 1; i < w.size(); ++i) s.erase(w.substr(i));

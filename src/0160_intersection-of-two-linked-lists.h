@@ -2,9 +2,9 @@
 
 class Solution {
  public:
-  static int MeasureListLength(ListNode *head) {
+  static int MeasureListLength(ListNode* head) {
     int len = 0;
-    ListNode *p = head;
+    ListNode* p = head;
     while (p) {
       len++;
       p = p->next;
@@ -12,7 +12,7 @@ class Solution {
     return len;
   }
 
-  ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+  ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
     int len_a = MeasureListLength(headA);
     int len_b = MeasureListLength(headB);
     if (len_a < len_b) {

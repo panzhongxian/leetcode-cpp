@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int countGoodRectangles(vector<vector<int>> &rectangles) {
+  int countGoodRectangles(vector<vector<int>>& rectangles) {
     int max_square_width = INT_MIN;
     int cnt = 0;
     for (auto v : rectangles) {

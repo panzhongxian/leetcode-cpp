@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int projectionArea(vector<vector<int>> &grid) {
+  int projectionArea(vector<vector<int>>& grid) {
     int n = grid.size();
     if (n == 0) {
       return 0;
@@ -8,7 +8,7 @@ class Solution {
 
     int ret = 0;
     vector<int> back_max(n, 0);
-    for (const auto &v : grid) {
+    for (const auto& v : grid) {
       int max = 0;
       for (int i = 0; i < v.size(); i++) {
         int num = v[i];

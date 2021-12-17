@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int findMiddleIndex(vector<int> &nums) {
+  int findMiddleIndex(vector<int>& nums) {
     int sum = 0;
 
     for (int i : nums) {

@@ -27,7 +27,7 @@ class Solution {
     insert_words(s1);
     insert_words(s2);
     vector<string> ret;
-    for (auto &kv : m) {
+    for (auto& kv : m) {
       if (kv.second == 1) {
         ret.push_back(kv.first);
       }

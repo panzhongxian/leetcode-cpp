@@ -1,7 +1,7 @@
 #include "base.h"
 class Solution {
  public:
-  vector<vector<int>> threeSum(vector<int> &nums) {
+  vector<vector<int>> threeSum(vector<int>& nums) {
     vector<vector<int>> ret;
     sort(nums.begin(), nums.end());
     unordered_map<int, int> num_cnt_mp;

@@ -1,9 +1,9 @@
 class Solution {
  public:
-  int calPoints(vector<string> &ops) {
+  int calPoints(vector<string>& ops) {
     int ret = 0;
     vector<int> record;
-    for (auto &s : ops) {
+    for (auto& s : ops) {
       if (s == "C") {
         record.erase(record.begin() + record.size() - 1);
       } else if (s == "D") {

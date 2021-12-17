@@ -7,7 +7,7 @@ bool validate_cells_dist_order(int rows, int cols, int rCenter, int cCenter) {
     return false;
   };
   int last_distance = 0;
-  for (auto &v : vv) {
+  for (auto& v : vv) {
     int curr_distance = abs(v[0] - rCenter) + abs(v[1] - cCenter);
     if (curr_distance < last_distance) {
       return false;

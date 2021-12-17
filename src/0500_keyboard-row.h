@@ -9,7 +9,7 @@ class Solution {
       init_flag = true;
     }
   }
-  bool checkWord(const string &word) {
+  bool checkWord(const string& word) {
     int prev_line = -1;
     for (char c : word) {
       int diff;
@@ -29,9 +29,9 @@ class Solution {
     }
     return true;
   }
-  vector<string> findWords(vector<string> &words) {
+  vector<string> findWords(vector<string>& words) {
     vector<string> ret;
-    for (auto &word : words) {
+    for (auto& word : words) {
       if (checkWord(word)) {
         ret.push_back(word);
       }

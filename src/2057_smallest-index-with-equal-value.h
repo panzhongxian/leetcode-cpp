@@ -1,7 +1,7 @@
 #include "base.h"
 class Solution {
  public:
-  int smallestEqual(vector<int> &nums) {
+  int smallestEqual(vector<int>& nums) {
     int i = 0;
     int j = 0;
     while (i < nums.size()) {

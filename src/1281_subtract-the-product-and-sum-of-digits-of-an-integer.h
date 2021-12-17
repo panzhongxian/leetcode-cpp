@@ -1,6 +1,6 @@
 class Solution {
  public:
-  void splitDigits(int n, vector<char> &digits) {
+  void splitDigits(int n, vector<char>& digits) {
     while (n) {
       digits.push_back(n % 10);
       n /= 10;

@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool validPath(int n, vector<vector<int>> &edges, int start, int end) {
+  bool validPath(int n, vector<vector<int>>& edges, int start, int end) {
     if (start > end) {
       swap(start, end);
     }
@@ -10,7 +10,7 @@ class Solution {
 
     int prev_start = INT_MAX;
     map<int, set<int>> m;
-    for (auto &v : edges) {
+    for (auto& v : edges) {
       m[v[0]].insert(v[1]);
       m[v[1]].insert(v[0]);
     }

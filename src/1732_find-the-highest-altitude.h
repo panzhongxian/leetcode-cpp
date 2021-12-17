@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int largestAltitude(vector<int> &gain) {
+  int largestAltitude(vector<int>& gain) {
     int curr_altitude = 0;
     int ret = 0;
     for (int n : gain) {

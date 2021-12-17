@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<vector<int>> imageSmoother(vector<vector<int>> &img) {
+  vector<vector<int>> imageSmoother(vector<vector<int>>& img) {
     vector<vector<int>> ret(img);
     int bottom_limit = img.size() - 1;
     int right_limit = img[0].size() - 1;

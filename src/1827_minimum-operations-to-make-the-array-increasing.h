@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int minOperations(vector<int> &nums) {
+  int minOperations(vector<int>& nums) {
     if (nums.empty()) return 0;
     int ret = 0;
     int prev = nums[0];

@@ -3,9 +3,9 @@
 typedef unordered_map<int, vector<pair<int, int>>>::const_iterator umc_iter;
 class Solution {
  public:
-  void insert_valid_quadruplet(const vector<int> &nums, set<vector<int>> &ret,
-                               const vector<pair<int, int>> &v1,
-                               const vector<pair<int, int>> &v2) {
+  void insert_valid_quadruplet(const vector<int>& nums, set<vector<int>>& ret,
+                               const vector<pair<int, int>>& v1,
+                               const vector<pair<int, int>>& v2) {
     for (auto p1 : v1) {
       for (auto p2 : v2) {
         if (p1.first == p2.first || p1.first == p2.second ||
@@ -20,7 +20,7 @@ class Solution {
     }
   }
 
-  vector<vector<int>> fourSum(vector<int> &nums, int target) {
+  vector<vector<int>> fourSum(vector<int>& nums, int target) {
     vector<vector<int>> ret;
     set<vector<int>> ret_set;
     sort(nums.begin(), nums.end());

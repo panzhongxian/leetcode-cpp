@@ -1,8 +1,8 @@
 class Solution {
  public:
-  int maximumPopulation(vector<vector<int>> &logs) {
+  int maximumPopulation(vector<vector<int>>& logs) {
     int m[100] = {0};
-    for (auto &v : logs) {
+    for (auto& v : logs) {
       for (int i = v[0] - 1950; i < v[1] - 1950; i++) {
         m[i]++;
       }

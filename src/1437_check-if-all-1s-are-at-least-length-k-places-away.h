@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool kLengthApart(vector<int> &nums, int k) {
+  bool kLengthApart(vector<int>& nums, int k) {
     if (k == 0) {
       return true;
     }

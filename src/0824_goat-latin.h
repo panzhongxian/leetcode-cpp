@@ -1,6 +1,6 @@
 class Solution {
  public:
-  size_t get_next_word(string &sentence, size_t pos, string *word) {
+  size_t get_next_word(string& sentence, size_t pos, string* word) {
     auto p = sentence.find_first_not_of(' ', pos);
     if (p == string::npos) {
       *word = "";

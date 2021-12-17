@@ -1,6 +1,6 @@
 class Solution {
  public:
-  bool uniqueOccurrences(vector<int> &arr) {
+  bool uniqueOccurrences(vector<int>& arr) {
     unordered_map<int, int> m;
     for (int i : arr) {
       if (m.find(i) == m.end()) {
@@ -10,7 +10,7 @@ class Solution {
       }
     }
     set<int> s;
-    for (auto &kv : m) {
+    for (auto& kv : m) {
       if (s.find(kv.second) != s.end()) {
         return false;
       }

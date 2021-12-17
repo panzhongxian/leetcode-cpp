@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<vector<int>> construct2DArray(vector<int> &original, int m, int n) {
+  vector<vector<int>> construct2DArray(vector<int>& original, int m, int n) {
     vector<vector<int>> ret;
     if (original.size() != m * n) {
       return ret;

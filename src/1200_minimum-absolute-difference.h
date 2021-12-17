@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<vector<int>> minimumAbsDifference(vector<int> &arr) {
+  vector<vector<int>> minimumAbsDifference(vector<int>& arr) {
     vector<vector<int>> ret;
     sort(arr.begin(), arr.end());
 

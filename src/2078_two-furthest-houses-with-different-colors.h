@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int maxDistance(vector<int> &colors) {
+  int maxDistance(vector<int>& colors) {
     map<int, pair<int, int>> m;
     for (int i = 0; i < colors.size(); i++) {
       int color = colors[i];

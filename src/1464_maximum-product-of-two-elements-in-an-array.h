@@ -1,6 +1,6 @@
 class Solution {
  public:
-  int maxProduct(vector<int> &nums) {
+  int maxProduct(vector<int>& nums) {
     int i = INT_MIN;
     int j = INT_MIN;
     for (int num : nums) {

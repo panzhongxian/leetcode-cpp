@@ -4,12 +4,12 @@ typedef base::TreeNode<int> TreeNode;
 
 class Solution {
  public:
-  int minDepth(TreeNode *root) {
+  int minDepth(TreeNode* root) {
     if (!root) {
       return 0;
     }
 
-    vector<TreeNode *> level_traversal;
+    vector<TreeNode*> level_traversal;
     level_traversal.push_back(root);
     int start_idx = 0;
     int end_idx;
@@ -18,7 +18,7 @@ class Solution {
     while (start_idx < level_traversal.size()) {
       end_idx = level_traversal.size();
       cur_depth++;
-      TreeNode *cur_node;
+      TreeNode* cur_node;
       for (int i = start_idx; i < end_idx; ++i) {
         cur_node = level_traversal[i];
         if (cur_node->left == nullptr && cur_node->right == nullptr) {

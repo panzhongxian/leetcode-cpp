@@ -26,13 +26,13 @@ class T {
   }
 };
 
-T operator&(const T &t1, const T &t2) {
+T operator&(const T& t1, const T& t2) {
   T t;
   t.left = t1.left & t2.left;
   t.right = t1.right & t2.right;
   return t;
 }
-T operator|(const T &t1, const T &t2) {
+T operator|(const T& t1, const T& t2) {
   T t;
   t.left = t1.left | t2.left;
   t.right = t1.right | t2.right;
@@ -41,8 +41,8 @@ T operator|(const T &t1, const T &t2) {
 
 class Solution {
  public:
-  vector<int> twoOutOfThree(vector<int> &nums1, vector<int> &nums2,
-                            vector<int> &nums3) {
+  vector<int> twoOutOfThree(vector<int>& nums1, vector<int>& nums2,
+                            vector<int>& nums3) {
     T t1, t2, t3, t;
     for (auto num : nums1) {
       t1.insert(num);

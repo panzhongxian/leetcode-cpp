@@ -1,6 +1,6 @@
 class Solution {
  public:
-  string tree2str(TreeNode *root) {
+  string tree2str(TreeNode* root) {
     if (root == nullptr) {
       return "";
     }

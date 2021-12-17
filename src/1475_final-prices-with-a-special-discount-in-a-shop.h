@@ -1,6 +1,6 @@
 class Solution {
  public:
-  vector<int> finalPrices(vector<int> &prices) {
+  vector<int> finalPrices(vector<int>& prices) {
     vector<int> ret(prices.size());
     stack<pair<int, int>> s;
     for (int i = 0; i < prices.size(); i++) {

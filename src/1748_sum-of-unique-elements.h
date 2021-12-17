@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int sumOfUnique(vector<int> &nums) {
     unordered_map<int, int> m;
     int ret = 0;

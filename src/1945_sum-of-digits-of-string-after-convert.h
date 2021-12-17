@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int getLucky(string s, int k) {
     int digits[s.size() * 2];
     int digits_len = 0;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> runningSum(vector<int> &nums) {
     vector<int> ret(nums.size());
     int prev_sum = 0;

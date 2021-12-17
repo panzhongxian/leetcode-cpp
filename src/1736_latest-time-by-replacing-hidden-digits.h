@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   inline int get_digit_value(char c) { return c == '?' ? -1 : c - '0'; }
   string get_max_str(char a, char b, int max_ab) {
     return get_max_str(get_digit_value(a), get_digit_value(b), max_ab);

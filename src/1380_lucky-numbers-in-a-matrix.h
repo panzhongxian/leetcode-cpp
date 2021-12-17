@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> luckyNumbers(vector<vector<int>> &matrix) {
     vector<int> ret;
     set<pair<int, int>> min_num_locations;

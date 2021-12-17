@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int timeRequiredToBuy(vector<int> &tickets, int k) {
     int base = tickets[k];
     int ret = 0;

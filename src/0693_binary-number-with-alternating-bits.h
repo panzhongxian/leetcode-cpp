@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool hasAlternatingBits(int n) {
     bool prev, curr;
     curr = n & 1;

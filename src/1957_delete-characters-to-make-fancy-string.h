@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string makeFancyString(string s) {
     string ret;
     char prev_char = '0';

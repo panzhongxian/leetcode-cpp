@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string sortString(string s) {
     list<pair<char, int>> l;
     int m[26];

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findTheDistanceValue(vector<int> &arr1, vector<int> &arr2, int d) {
     set<int> s;
     for (int i : arr2) {
@@ -8,8 +8,7 @@ public:
     int ret = 0;
     for (int i : arr1) {
       auto t = s.insert(i);
-      if (!t.second)
-        continue;
+      if (!t.second) continue;
       if (next(t.first) != s.end() && abs(*next(t.first) - i) <= d) {
         s.erase(t.first);
         continue;

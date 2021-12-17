@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<vector<int>> largeGroupPositions(string s) {
     vector<vector<int>> ret;
     s.push_back('#');

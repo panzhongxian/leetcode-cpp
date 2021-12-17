@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countCharacters(vector<string> &words, string chars) {
     int m[26] = {0};
     auto ret = 0;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countNegatives(vector<vector<int>> &grid) {
     int ret = 0;
     int i = 0;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool areOccurrencesEqual(string s) {
     int m[26];
     memset(m, 0, sizeof(int) * 26);

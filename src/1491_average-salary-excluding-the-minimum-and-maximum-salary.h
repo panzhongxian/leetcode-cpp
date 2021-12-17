@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   double average(vector<int> &salary) {
     int min_val = INT_MAX;
     int max_val = INT_MIN;

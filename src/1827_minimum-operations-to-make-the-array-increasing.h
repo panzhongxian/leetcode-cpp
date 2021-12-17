@@ -1,8 +1,7 @@
 class Solution {
-public:
+ public:
   int minOperations(vector<int> &nums) {
-    if (nums.empty())
-      return 0;
+    if (nums.empty()) return 0;
     int ret = 0;
     int prev = nums[0];
     for (int i = 1; i < nums.size(); i++) {

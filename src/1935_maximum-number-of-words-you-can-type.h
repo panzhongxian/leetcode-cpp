@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int canBeTypedWords(string text, string brokenLetters) {
     int ret = 0;
     text.push_back(' ');

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string sortSentence(string s) {
     vector<string> v(10);
     string ret;

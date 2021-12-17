@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> decompressRLElist(vector<int> &nums) {
     vector<int> ret;
 

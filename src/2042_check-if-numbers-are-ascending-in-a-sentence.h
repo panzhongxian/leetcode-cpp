@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool areNumbersAscending(string s) {
     s.push_back(' ');
     int last_num = INT_MIN;

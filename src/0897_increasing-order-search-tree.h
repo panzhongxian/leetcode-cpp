@@ -2,7 +2,7 @@
 typedef base::TreeNode<int> TreeNode;
 
 class Solution {
-public:
+ public:
   TreeNode *increasingBST(TreeNode *root, TreeNode **tail = nullptr) {
     TreeNode *ret = nullptr;
     if (root == nullptr) {

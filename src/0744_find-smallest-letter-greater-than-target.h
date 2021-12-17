@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   char nextGreatestLetter(vector<char> &letters, char target) {
     int left = 0;
     int right = letters.size();

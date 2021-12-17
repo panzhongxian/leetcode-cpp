@@ -1,6 +1,6 @@
 // TO ENHANCE
 class Solution {
-public:
+ public:
   vector<int> findMode(TreeNode *root) {
     unordered_map<int, int> m;
     stack<TreeNode *> s;

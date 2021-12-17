@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool checkIfPangram(string sentence) {
     int32_t m = 0;
     for (char c : sentence) {

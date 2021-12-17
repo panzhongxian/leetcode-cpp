@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int sumBase(int n, int k) {
     int ret = 0;
     while (n) {

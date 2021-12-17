@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int minimumDifference(vector<int> &nums, int k) {
     if (k == 1) {
       return 0;

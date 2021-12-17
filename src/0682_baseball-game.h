@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int calPoints(vector<string> &ops) {
     int ret = 0;
     vector<int> record;

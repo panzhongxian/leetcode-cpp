@@ -1,15 +1,16 @@
 namespace std {
 typedef pair<int, int> Domino;
-template <> struct hash<Domino> {
+template <>
+struct hash<Domino> {
   std::size_t operator()(const Domino &k) const {
     using std::hash;
     return hash<int>()(k.first) ^ (hash<int>()(k.second) << 1);
   }
 };
-} // namespace std
+}  // namespace std
 
 class Solution {
-public:
+ public:
   int numEquivDominoPairs(vector<vector<int>> &dominoes) {
     unordered_map<pair<int, int>, int> m;
     for (auto &v : dominoes) {

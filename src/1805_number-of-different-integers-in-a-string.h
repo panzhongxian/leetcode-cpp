@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string lstrip_zero(const string &s) {
     int i = 0;
     while (i < s.size() && s[i] == '0') {

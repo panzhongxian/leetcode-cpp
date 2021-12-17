@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countGoodRectangles(vector<vector<int>> &rectangles) {
     int max_square_width = INT_MIN;
     int cnt = 0;

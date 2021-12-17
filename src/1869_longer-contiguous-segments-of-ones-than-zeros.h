@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool checkZeroOnes(string s) {
     if (s.empty()) {
       return false;

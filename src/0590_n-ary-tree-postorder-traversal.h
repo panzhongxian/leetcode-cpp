@@ -1,7 +1,7 @@
 #include "base.h"
 
 class Node {
-public:
+ public:
   int val;
   vector<Node *> children;
 
@@ -16,7 +16,7 @@ public:
 };
 
 class Solution {
-public:
+ public:
   vector<int> postorder(Node *root) {
     vector<int> ret;
     if (root == nullptr) {

@@ -1,6 +1,6 @@
 #include <unistd.h>
 class Foo {
-public:
+ public:
   Foo() : last_finished_step(0) {}
 
   void first(function<void()> printFirst) {
@@ -33,6 +33,6 @@ public:
     last_finished_step++;
   }
 
-private:
+ private:
   int last_finished_step;
 };

@@ -1,11 +1,11 @@
 #include "base.h"
 class Solution {
-private:
+ private:
   class StrInfo {
     int32_t lowers{0};
     int32_t uppers{0};
 
-  public:
+   public:
     bool is_nice() { return lowers == uppers; };
     void insert(char c) {
       if (c >= 'a' && c <= 'z') {
@@ -16,7 +16,7 @@ private:
     }
   };
 
-public:
+ public:
   string longestNiceSubstring(string s) {
     string ret;
     StrInfo vv[s.size()][s.size()];

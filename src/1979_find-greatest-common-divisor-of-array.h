@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findGCD(vector<int> &nums) {
     int min = INT_MAX;
     int max = INT_MIN;

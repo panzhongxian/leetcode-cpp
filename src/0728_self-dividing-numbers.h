@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool is_dividing_number(int i) {
     for (char c : to_string(i)) {
       if (c == '0') {

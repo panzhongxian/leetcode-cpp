@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string restoreString(string s, vector<int> &indices) {
     string ret(s);
     int k = 0;

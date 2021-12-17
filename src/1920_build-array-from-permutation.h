@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> buildArray(vector<int> &nums) {
     unordered_map<int, int> m;
 

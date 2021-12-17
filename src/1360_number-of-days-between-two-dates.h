@@ -1,9 +1,10 @@
-#include "base.h"
 #include <time.h>
+
+#include "base.h"
 
 typedef struct tm tm;
 class Solution {
-public:
+ public:
   int daysBetweenDates(string date1, string date2) {
     tm t1, t2;
     memset(&t1, 0, sizeof(tm));

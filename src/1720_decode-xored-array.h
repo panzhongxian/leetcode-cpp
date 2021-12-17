@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> decode(vector<int> &encoded, int first) {
     vector<int> ret(encoded.size() + 1);
     ret[0] = first;

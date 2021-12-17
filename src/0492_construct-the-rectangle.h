@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> constructRectangle(int area) {
     int l = floor(sqrt(area));
     while (true) {

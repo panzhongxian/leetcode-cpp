@@ -4,7 +4,7 @@ struct PointWithOrigin {
 };
 
 class Solution {
-public:
+ public:
   vector<vector<int>> floodFill(vector<vector<int>> &image, int sr, int sc,
                                 int newColor) {
     if (image[sr][sc] == newColor) {

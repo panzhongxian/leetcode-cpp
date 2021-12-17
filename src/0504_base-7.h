@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string convertToBase7(int num) {
     bool minus_flag = false;
     if (num == 0) {

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int largestAltitude(vector<int> &gain) {
     int curr_altitude = 0;
     int ret = 0;

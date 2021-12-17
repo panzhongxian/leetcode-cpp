@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string defangIPaddr(string address) {
     string ret;
     for (char c : address) {

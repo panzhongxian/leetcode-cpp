@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<string> stringMatching(vector<string> &words) {
     vector<string> ret;
     if (words.empty()) {

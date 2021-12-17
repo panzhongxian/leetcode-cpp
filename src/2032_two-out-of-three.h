@@ -1,5 +1,5 @@
 class T {
-public:
+ public:
   int64_t left;
   int64_t right;
 
@@ -40,8 +40,7 @@ T operator|(const T &t1, const T &t2) {
 }
 
 class Solution {
-
-public:
+ public:
   vector<int> twoOutOfThree(vector<int> &nums1, vector<int> &nums2,
                             vector<int> &nums3) {
     T t1, t2, t3, t;

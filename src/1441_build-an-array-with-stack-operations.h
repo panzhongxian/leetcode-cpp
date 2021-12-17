@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<string> buildArray(vector<int> &target, int n) {
     int k = 0;
     vector<string> ret;

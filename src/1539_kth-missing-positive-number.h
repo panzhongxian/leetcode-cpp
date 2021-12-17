@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findKthPositive(vector<int> &arr, int k) {
     int counter = 1;
     int missed_num = 0;

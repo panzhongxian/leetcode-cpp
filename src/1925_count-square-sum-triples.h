@@ -2,7 +2,7 @@ class Solution {
   vector<int> square_list;
   unordered_map<int, int> square_map;
 
-public:
+ public:
   Solution() { square_list = calc_square_list(); }
   vector<int> calc_square_list() {
     vector<int> square_list(251);

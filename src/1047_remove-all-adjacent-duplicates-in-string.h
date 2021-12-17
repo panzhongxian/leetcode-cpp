@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string removeDuplicates(string s) {
     string ret;
 

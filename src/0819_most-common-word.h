@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string mostCommonWord(string paragraph, vector<string> &banned) {
     paragraph.push_back('.');
     unordered_set<string> banned_set;

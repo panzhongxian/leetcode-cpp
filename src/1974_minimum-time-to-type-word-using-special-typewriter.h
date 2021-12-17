@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int minTimeToType(string word) {
     int ret = word.size();
     char prev_char = 'a';

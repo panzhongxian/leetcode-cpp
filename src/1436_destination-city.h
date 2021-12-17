@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string destCity(vector<vector<string>> &paths) {
     unordered_set<string> s;
     for (const auto &v : paths) {

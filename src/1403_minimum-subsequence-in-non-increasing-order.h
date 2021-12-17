@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> minSubsequence(vector<int> &nums) {
     sort(nums.begin(), nums.end());
     int total_sum = 0;

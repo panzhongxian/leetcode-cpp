@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countKDifference(vector<int> &nums, int k) {
     map<int, int> m;
     for (int i = 0; i < nums.size(); i++) {

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool validate(string &s) {
     int letter_cnt = 0;
     int hyphen_cnt = 0;
@@ -8,28 +8,27 @@ public:
       return false;
     }
     switch (s[s.size() - 1]) {
-    case '-':
-      return false;
-    case '!':
-    case '.':
-    case ',':
-      s.pop_back();
+      case '-':
+        return false;
+      case '!':
+      case '.':
+      case ',':
+        s.pop_back();
     }
 
     for (int i = 0; i < s.size(); i++) {
       switch (s[i]) {
-      case '-':
-        if (hyphen_cnt++ >= 1 || (i == s.size() - 1)) {
+        case '-':
+          if (hyphen_cnt++ >= 1 || (i == s.size() - 1)) {
+            return false;
+          }
+          break;
+        case '!':
+        case '.':
+        case ',':
           return false;
-        }
-        break;
-      case '!':
-      case '.':
-      case ',':
-        return false;
-      default:
-        if (s[i] >= '0' && s[i] <= '9')
-          return false;
+        default:
+          if (s[i] >= '0' && s[i] <= '9') return false;
       }
     }
     return true;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int maxLengthBetweenEqualCharacters(string s) {
     int m[26] = {0};
     int ret = -1;

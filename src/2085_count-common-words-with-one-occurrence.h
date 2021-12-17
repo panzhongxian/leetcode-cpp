@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countWords(vector<string> &words1, vector<string> &words2) {
     unordered_map<string, int> m1, m2;
     for (auto &word : words1) {

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool checkAlmostEquivalent(string word1, string word2) {
     int m1[256] = {0};
     int m2[256] = {0};

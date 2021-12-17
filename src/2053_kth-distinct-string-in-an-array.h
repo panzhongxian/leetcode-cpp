@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string kthDistinct(vector<string> &arr, int k) {
     unordered_map<string, int> m;
     vector<string> v;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findMinLargerValue(TreeNode *root, int val) {
     if (root == nullptr) {
       return -1;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countGoodTriplets(vector<int> &arr, int a, int b, int c) {
     int ret = 0;
     for (int i = 0; i < arr.size(); i++) {

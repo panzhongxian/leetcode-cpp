@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int maximumDifference(vector<int> &nums) {
     int ret = -1;
     int min = INT_MAX;

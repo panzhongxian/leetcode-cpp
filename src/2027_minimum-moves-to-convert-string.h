@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int minimumMoves(string s) {
     int ret = 0;
     auto pos = s.find('X');

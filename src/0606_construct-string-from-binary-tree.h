@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string tree2str(TreeNode *root) {
     if (root == nullptr) {
       return "";

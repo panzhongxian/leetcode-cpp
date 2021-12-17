@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findSpecialInteger(vector<int> &arr) {
     int n = arr.size();
     for (int i : {n / 4, n / 2, n * 3 / 4}) {

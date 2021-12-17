@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   struct Counter {
     int start_index;
     int end_index;

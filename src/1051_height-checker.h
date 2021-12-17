@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int heightChecker(vector<int> &heights) {
     vector<int> v(heights);
     sort(v.begin(), v.end());

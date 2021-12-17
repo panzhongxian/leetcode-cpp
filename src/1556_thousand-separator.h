@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string thousandSeparator(int n) {
     string ret;
     while (n > 1000) {

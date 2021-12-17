@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool findTarget(TreeNode *root, int k) {
     unordered_set<int> s;
     queue<TreeNode *> q;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2) {
     stack<int> s;
     map<int, int> m;

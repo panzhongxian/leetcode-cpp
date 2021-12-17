@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   size_t get_next_word(string &sentence, size_t pos, string *word) {
     auto p = sentence.find_first_not_of(' ', pos);
     if (p == string::npos) {
@@ -31,20 +31,20 @@ public:
         ret += " ";
       }
       switch (word[0]) {
-      case 'a':
-      case 'e':
-      case 'i':
-      case 'o':
-      case 'u':
-      case 'A':
-      case 'E':
-      case 'I':
-      case 'O':
-      case 'U':
-        ret += word + "ma";
-        break;
-      default:
-        ret += word.substr(1) + word.substr(0, 1) + "ma";
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+          ret += word + "ma";
+          break;
+        default:
+          ret += word.substr(1) + word.substr(0, 1) + "ma";
       }
       ret += string(i++, 'a');
     }

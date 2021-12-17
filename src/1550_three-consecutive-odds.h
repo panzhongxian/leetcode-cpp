@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool threeConsecutiveOdds(vector<int> &arr) {
     int consecutive_odds_len = 0;
     int flags = 0;

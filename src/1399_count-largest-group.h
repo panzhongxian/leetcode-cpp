@@ -1,12 +1,13 @@
-#include "base.h"
 #include <algorithm>
 #include <vector>
+
+#include "base.h"
 
 using std::min;
 using std::vector;
 
 class Solution {
-public:
+ public:
   vector<int> vector_shift(const vector<int> &v, int n) {
     auto ret(v);
     for (int i = 0; i < n; i++) {
@@ -32,19 +33,19 @@ public:
     if (n < 10) {
       return vector<int>(n + 1, 1);
     }
-#define XX(base)                                                               \
-  do {                                                                         \
-    if (n < base * 10) {                                                       \
-      vector<int> ret;                                                         \
-      vector<int> v(f(base - 1));                                              \
-      int i = 0;                                                               \
-      int j = 0;                                                               \
-      for (; i < n + 1 - base; i += base, j++) {                               \
-        vector_add(ret, vector_shift(v, j));                                   \
-      }                                                                        \
-      vector_add(ret, vector_shift(f(n - i), j));                              \
-      return ret;                                                              \
-    }                                                                          \
+#define XX(base)                                  \
+  do {                                            \
+    if (n < base * 10) {                          \
+      vector<int> ret;                            \
+      vector<int> v(f(base - 1));                 \
+      int i = 0;                                  \
+      int j = 0;                                  \
+      for (; i < n + 1 - base; i += base, j++) {  \
+        vector_add(ret, vector_shift(v, j));      \
+      }                                           \
+      vector_add(ret, vector_shift(f(n - i), j)); \
+      return ret;                                 \
+    }                                             \
   } while (0);
 
     XX(10);

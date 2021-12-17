@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int dayOfYear(string date) {
     int year = atoi(date.c_str());
     auto pos = date.find('-');

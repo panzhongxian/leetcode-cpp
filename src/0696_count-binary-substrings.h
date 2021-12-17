@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countBinarySubstrings(string s) {
     int ret = 0;
     int prev_len = 0;

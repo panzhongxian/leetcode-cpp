@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   static int count_bit(int i) {
     auto ret = 0;
     while (i) {

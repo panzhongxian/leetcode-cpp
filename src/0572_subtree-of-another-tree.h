@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool is_equal_tree(TreeNode *t1, TreeNode *t2) {
     if (t1 == nullptr) {
       return t2 == nullptr;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> distributeCandies(int candies, int num_people) {
     auto n = num_people;
     vector<int> ret(num_people, 0);

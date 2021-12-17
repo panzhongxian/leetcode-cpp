@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countOdds(int low, int high) {
     low |= 1;
     if (high & 1 == 1) {

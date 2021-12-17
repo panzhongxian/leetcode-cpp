@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int arraySign(vector<int> &nums) {
     bool minus_flag = false;
 

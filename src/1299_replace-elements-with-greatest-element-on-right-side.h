@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> replaceElements(vector<int> &arr) {
     vector<int> ret(arr.size());
     int max_val = -1;

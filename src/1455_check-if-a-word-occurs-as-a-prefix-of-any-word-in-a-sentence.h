@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int isPrefixOfWord(string sentence, string searchWord) {
     sentence = " " + sentence;
     searchWord = " " + searchWord;

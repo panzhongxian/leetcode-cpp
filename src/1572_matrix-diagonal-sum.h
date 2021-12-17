@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int diagonalSum(vector<vector<int>> &mat) {
     int upper_limit = mat.size() >> 1;
     int ret = 0;

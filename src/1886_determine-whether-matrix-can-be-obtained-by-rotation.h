@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   typedef function<int(int, int, int)> rotate_index_func;
   bool is_rotated(vector<vector<int>> &mat, vector<vector<int>> &target,
                   rotate_index_func rotate_i_func,

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int minStartValue(vector<int> &nums) {
     int sum = 0;
     int min_sum = INT_MAX;

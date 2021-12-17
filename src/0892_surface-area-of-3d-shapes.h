@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   inline int suface_of_one_colume(int height) {
     return height == 0 ? 0 : (4 * height + 2);
   }

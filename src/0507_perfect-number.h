@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool checkPerfectNumber(int num) {
     int upper_bound = num - 1;
     int sum = 0;

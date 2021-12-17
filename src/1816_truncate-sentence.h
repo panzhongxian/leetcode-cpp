@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string truncateSentence(string s, int k) {
     size_t pos = 0;
     size_t end_pos = string::npos;

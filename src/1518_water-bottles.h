@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int numWaterBottles(int numBottles, int numExchange) {
     int ret = numBottles;
     while (numBottles >= numExchange) {

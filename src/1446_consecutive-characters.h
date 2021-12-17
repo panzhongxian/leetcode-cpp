@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int maxPower(string s) {
     int ret = 1;
     int curr_len = -1;

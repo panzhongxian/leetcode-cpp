@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string makeGood(string s) {
     constexpr int case_diff = 'A' > 'a' ? ('A' - 'a') : ('a' - 'A');
     stack<int> char_stack;

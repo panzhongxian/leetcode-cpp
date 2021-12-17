@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string replaceDigits(string s) {
     string ret;
     for (int i = 0; i < s.size(); i += 2) {

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool validPath(int n, vector<vector<int>> &edges, int start, int end) {
     if (start > end) {
       swap(start, end);
@@ -15,8 +15,7 @@ public:
       m[v[1]].insert(v[0]);
     }
     auto it = m.find(start);
-    if (it == m.end())
-      return false;
+    if (it == m.end()) return false;
 
     set<int> diff(m[start]);
     set<int> s;

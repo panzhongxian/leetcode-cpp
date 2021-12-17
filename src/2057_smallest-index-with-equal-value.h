@@ -1,6 +1,6 @@
 #include "base.h"
 class Solution {
-public:
+ public:
   int smallestEqual(vector<int> &nums) {
     int i = 0;
     int j = 0;

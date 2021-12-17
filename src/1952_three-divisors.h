@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int get_root_of_square_number(int i) {
     int root = floor(sqrt(i));
     if (root * root == i) {

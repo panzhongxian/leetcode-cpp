@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> targetIndices(vector<int> &nums, int target) {
     int less_than_cnt = 0;
     int target_cnt = 0;

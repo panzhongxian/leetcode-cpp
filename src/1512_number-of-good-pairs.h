@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int numIdenticalPairs(vector<int> &nums) {
     unordered_map<int, int> m;
     for (int num : nums) {

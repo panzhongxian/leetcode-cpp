@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int maxNumberOfBalloons(string text) {
     int m[26] = {0};
     for (char c : text) {

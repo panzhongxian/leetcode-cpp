@@ -1,7 +1,7 @@
 #include "base.h"
 
 class Solution {
-public:
+ public:
   static inline int get_vowel_index(char c) {
     static map<char, int> m{{'a', 0}, {'e', 1}, {'i', 2}, {'o', 3}, {'u', 4}};
     return 1 << m[c];

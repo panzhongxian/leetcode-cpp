@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findLengthOfLCIS(vector<int> &nums) {
     if (nums.empty()) {
       return 0;

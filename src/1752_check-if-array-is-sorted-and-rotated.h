@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool check(vector<int> &nums) {
     int breakpoint = -1;
     int prev = INT_MIN;
@@ -12,8 +12,7 @@ public:
       }
       prev = nums[i];
     }
-    if (breakpoint == -1)
-      return true;
+    if (breakpoint == -1) return true;
     return nums.back() <= nums.front();
   }
 };

@@ -1,4 +1,5 @@
 #include "1742_maximum-number-of-balls-in-a-box.h"
+
 #include "base.h"
 
 TEST(Solution, Demo) {

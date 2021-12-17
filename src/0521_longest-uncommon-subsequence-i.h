@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findLUSlength(string a, string b) {
     if (a.size() != b.size()) {
       return max(a.size(), b.size());

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   pair<int, int> xx(TreeNode *root) {
     int sum = 0;
     int tilt = 0;

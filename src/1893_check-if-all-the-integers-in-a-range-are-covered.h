@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool isCovered(vector<vector<int>> &ranges, int left, int right) {
     sort(ranges.begin(), ranges.end());
     for (auto &v : ranges) {

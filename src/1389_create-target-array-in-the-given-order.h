@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> createTargetArray(vector<int> &nums, vector<int> &index) {
     vector<int> ret;
     for (int i = 0; i < index.size(); i++) {

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int dominantIndex(vector<int> &nums) {
     if (nums.size() == 1) {
       return 0;

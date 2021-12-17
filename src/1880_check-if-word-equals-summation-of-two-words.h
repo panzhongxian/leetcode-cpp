@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int64_t word_value(const string &s) {
     int64_t ret = 0;
     for (char c : s) {

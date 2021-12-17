@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int projectionArea(vector<vector<int>> &grid) {
     int n = grid.size();
     if (n == 0) {

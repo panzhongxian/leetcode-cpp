@@ -1,6 +1,6 @@
 #include "base.h"
 class Solution {
-public:
+ public:
   int find_increasing_breakpoint(const vector<int> &nums, int skip_index = -1) {
     int prev = INT_MIN;
     for (int i = 0; i < nums.size(); i++) {

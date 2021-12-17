@@ -2,10 +2,10 @@
 class Solution {
   enum Direction { left = 1, right = 2, up = 4, down = 8 };
   class Node {
-  public:
+   public:
     int i;
     int j;
-    int directions; // 0b1111: left,right,up,down
+    int directions;  // 0b1111: left,right,up,down
     int from_direction;
 
     Node(int a, int b, int c = 0b1111, int d = 0)
@@ -14,18 +14,18 @@ class Solution {
     vector<Node> get_next_nodes() {
       vector<Node> ret;
       switch (from_direction) {
-      case down:
-        directions &= (left | right | down);
-        break;
-      case left:
-        directions &= (left | up);
-        break;
-      case right:
-        directions &= (right | up);
-        break;
-      case up:
-        directions &= up;
-        break;
+        case down:
+          directions &= (left | right | down);
+          break;
+        case left:
+          directions &= (left | up);
+          break;
+        case right:
+          directions &= (right | up);
+          break;
+        case up:
+          directions &= up;
+          break;
       }
 
       if (directions & left) {
@@ -44,7 +44,7 @@ class Solution {
     }
   };
 
-public:
+ public:
   vector<vector<int>> allCellsDistOrder(int rows, int cols, int rCenter,
                                         int cCenter) {
     vector<vector<int>> ret;

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> smallerNumbersThanCurrent(vector<int> &nums) {
     vector<int> sorted_num(nums);
 

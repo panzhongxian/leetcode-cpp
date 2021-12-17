@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int firstMissingPositive(vector<int> &nums) {
     for (int i = 0; i < nums.size(); i++) {
       if (nums[i] > nums.size() || nums[i] < 0) {

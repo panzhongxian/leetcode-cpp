@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> shuffle(vector<int> &nums, int n) {
     vector<int> ret(nums.size(), 0);
     int k = 0;

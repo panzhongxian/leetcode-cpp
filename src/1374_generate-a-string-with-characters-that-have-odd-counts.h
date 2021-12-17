@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string generateTheString(int n) {
     string ret(n, 'a');
     if (n % 2 == 0) {

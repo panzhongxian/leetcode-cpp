@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   char get_not_same_char(char c) {
     if (c == '?') {
       return 'a';

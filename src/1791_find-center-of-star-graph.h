@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findCenter(vector<vector<int>> &edges) {
     unordered_map<int, int> m;
 

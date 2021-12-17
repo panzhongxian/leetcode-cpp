@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool makeEqual(vector<string> &words) {
     int m[26];
     memset(m, 0, 26 * sizeof(int));

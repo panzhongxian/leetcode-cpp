@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int numOfStrings(vector<string> &patterns, string word) {
     int ret = 0;
     for (auto &s : patterns) {

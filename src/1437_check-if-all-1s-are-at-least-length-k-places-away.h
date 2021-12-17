@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool kLengthApart(vector<int> &nums, int k) {
     if (k == 0) {
       return true;

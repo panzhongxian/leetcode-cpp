@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string reformat(string s) {
     string s1, s2;
     for (char c : s) {

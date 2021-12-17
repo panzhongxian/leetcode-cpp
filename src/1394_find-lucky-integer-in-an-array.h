@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findLucky(vector<int> &arr) {
     map<int, int> m;
     for (int num : arr) {

@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int countGoodSubstrings(string s) {
     int ret = 0;
     for (int i = 2; i < s.size(); i++) {

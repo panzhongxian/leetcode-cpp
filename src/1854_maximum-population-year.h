@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int maximumPopulation(vector<vector<int>> &logs) {
     int m[100] = {0};
     for (auto &v : logs) {

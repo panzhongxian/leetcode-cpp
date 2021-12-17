@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<int> get_min_max_and_min_diff(TreeNode *root) {
     int max_val = root->val;
     int min_val = root->val;

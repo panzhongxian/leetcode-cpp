@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<string> findOcurrences(string text, string first, string second) {
     text = " " + text;
     string needle = " " + first + " " + second + " ";

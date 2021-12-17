@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<vector<int>> imageSmoother(vector<vector<int>> &img) {
     vector<vector<int>> ret(img);
     int bottom_limit = img.size() - 1;

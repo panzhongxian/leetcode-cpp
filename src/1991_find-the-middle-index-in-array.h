@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findMiddleIndex(vector<int> &nums) {
     int sum = 0;
 

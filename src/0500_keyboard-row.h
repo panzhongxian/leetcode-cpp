@@ -2,7 +2,7 @@ class Solution {
   static int m[26];
   static bool init_flag;
 
-public:
+ public:
   Solution() {
     if (!init_flag) {
       InitDict();

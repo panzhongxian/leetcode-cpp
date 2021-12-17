@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   bool isPrefixString(string s, vector<string> &words) {
     int shift = 0;
     for (auto &word : words) {

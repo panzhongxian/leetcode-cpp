@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   vector<vector<int>> transpose(vector<vector<int>> &matrix) {
     vector<vector<int>> ret;
     for (int i = 0; i < matrix.size(); i++) {

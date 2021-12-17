@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   int findLHS(vector<int> &nums) {
     unordered_map<int, int> m;
     for (auto num : nums) {

@@ -35,8 +35,7 @@
 
 - 如果只创建了`.h`文件，而没有创建的`_test.cc`，待添加的测试文件列表会列到文件 **`bazel-bin/no_test_source_files.txt`** 中
 
-
-## 使用镜像
+## 使用 Docker 镜像进行构建、测试、覆盖
 
 本项目中提供了一个 GCC 7 的编译环境镜像，用于进行后续的代码格式化、覆盖率报告生成、持续集成。
 
@@ -51,8 +50,15 @@ docker build -t ltcd tools/docker
 
 *Bazel 目前不能支持对高版本 GCC 9 的覆盖率测试和转换，目前[bazelbuild/bazel#9406](https://github.com/bazelbuild/bazel/issues/9406)该Issue还处于Open状态。*
 
+### 构建与测试
 
-## 格式化代码
+为了不需要每次都从头开始构建，可以将 Bazel 的缓存记录到主机上，利用 `-v` 选项进行映射：
+
+```bash
+docker run -v $PWD:/leetcode-cpp -v ~/docker_cache:/bazel/output -t -i ltcd /bin/sh -c "cd leetcode-cpp && bash tools/build.sh"
+```
+
+### 格式化代码
 
 如果你使用 clang-format 等本地工具，可以直接利用根目录下的 `.clang-format` 配置文件进行格式化。
 
@@ -64,7 +70,7 @@ docker run -v $PWD:/leetcode-cpp -t -i ltcd /bin/sh -c "cd leetcode-cpp && bash 
 # docker run -v $PWD:/leetcode-cpp -e http_proxy=$http_proxy -e https_proxy=$https_proxy -t -i ltcd /bin/sh -c "cd leetcode-cpp && bash tools/format.sh"
 ```
 
-## 覆盖率报告
+### 覆盖率报告
 
 构建完成后，可以运行覆盖率测试的脚本：
 
@@ -102,8 +108,6 @@ base::TreeNodeFactory<int>("[1,2,2,3,3,null,null,4,5]")
 
 同时，**`.h`** 文件需要实例化模板，如`typedef base::TreeNode<int> Treenode;`，上边"额外说明"中也有提到。
 
-
 [travis-image]: https://app.travis-ci.com/panzhongxian/leetcode-cpp.svg?branch=master
 [travis-url]: https://app.travis-ci.com/github/panzhongxian/leetcode-cpp
-
 

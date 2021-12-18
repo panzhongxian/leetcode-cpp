@@ -27,7 +27,7 @@ fi
 set -e
 OUTDIR=bazel-coverage
 
-bazel coverage //...
+bazel --output_base=/tmp/bazel_output coverage //...
 genhtml --show-details --legend --output-directory $OUTDIR \
   $(find bazel-out/ -name coverage.dat)
 ls -l $OUTDIR/index.html

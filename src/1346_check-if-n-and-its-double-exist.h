@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool checkIfExist(vector<int>& arr) {

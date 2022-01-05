@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   vector<vector<int>> construct2DArray(vector<int>& original, int m, int n) {
@@ -12,4 +14,3 @@ class Solution {
     return ret;
   }
 };
-~

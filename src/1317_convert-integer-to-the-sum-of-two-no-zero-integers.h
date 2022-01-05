@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   vector<int> getNoZeroIntegers(int n) {

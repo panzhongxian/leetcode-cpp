@@ -1,3 +1,6 @@
+#include "base.h"
+typedef base::TreeNode<int> TreeNode;
+
 class Solution {
  public:
   vector<int> get_min_max_and_min_diff(TreeNode* root) {

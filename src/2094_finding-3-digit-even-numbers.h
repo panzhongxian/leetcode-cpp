@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   vector<int> findEvenNumbers(vector<int>& digits) {

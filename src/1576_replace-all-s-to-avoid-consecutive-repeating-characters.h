@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   char get_not_same_char(char c) {

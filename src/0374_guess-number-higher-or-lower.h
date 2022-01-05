@@ -1,3 +1,6 @@
+#include "base.h"
+extern int guess(int num);
+
 class Solution {
  public:
   int guessNumber(int n) {

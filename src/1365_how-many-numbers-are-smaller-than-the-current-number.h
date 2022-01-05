@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   vector<int> smallerNumbersThanCurrent(vector<int>& nums) {

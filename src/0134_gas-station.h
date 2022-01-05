@@ -1,6 +1,4 @@
-#include <vector>
-
-using std::vector;
+#include "base.h"
 
 class Solution {
  public:

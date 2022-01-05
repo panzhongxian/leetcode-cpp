@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   auto check_pawn(vector<vector<char>> vv, int x, int y) {

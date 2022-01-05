@@ -1,3 +1,6 @@
+#include "base.h"
+typedef base::TreeNode<int> TreeNode;
+
 class Solution {
  public:
   string tree2str(TreeNode* root) {

@@ -1,3 +1,5 @@
+#include "base.h"
+
 class MinStack {
  public:
   /** initialize your data structure here. */

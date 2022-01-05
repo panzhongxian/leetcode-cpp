@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool checkStraightLine(vector<vector<int>>& coordinates) {

@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int numOfStrings(vector<string>& patterns, string word) {

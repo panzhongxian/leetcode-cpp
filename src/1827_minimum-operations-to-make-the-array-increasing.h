@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int minOperations(vector<int>& nums) {

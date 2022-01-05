@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   static int count_bit(int i) {

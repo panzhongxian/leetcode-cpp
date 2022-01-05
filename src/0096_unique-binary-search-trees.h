@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int numTrees(int n) {
@@ -5,7 +7,7 @@ class Solution {
     fn.push_back(1);
     for (int i = 1; i <= n; i++) {
       fn.push_back(0);
-      for (j = 0; j < i; j++) {
+      for (int j = 0; j < i; j++) {
         fn.back() += fn[j] * fn[i - 1 - j];
       }
     }

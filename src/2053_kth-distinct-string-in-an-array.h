@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   string kthDistinct(vector<string>& arr, int k) {

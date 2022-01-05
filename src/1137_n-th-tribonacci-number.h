@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int tribonacci(int n) {
@@ -10,7 +12,7 @@ class Solution {
     int a = 0;
     int b = 1;
     int c = 1;
-    ret = 0;
+    int ret = 0;
     for (int i = 3; i <= n; i++) {
       ret = a + b + c;
       a = b;

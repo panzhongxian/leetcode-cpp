@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int64_t word_value(const string& s) {

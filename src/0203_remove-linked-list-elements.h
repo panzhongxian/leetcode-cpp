@@ -1,3 +1,6 @@
+#include "base.h"
+typedef base::ListNode<int> ListNode;
+
 class Solution {
  public:
   ListNode* removeElements(ListNode* head, int val) {

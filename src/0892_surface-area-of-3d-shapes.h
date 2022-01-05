@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   inline int suface_of_one_colume(int height) {

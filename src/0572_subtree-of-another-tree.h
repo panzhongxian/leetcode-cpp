@@ -1,3 +1,6 @@
+#include "base.h"
+typedef base::TreeNode<int> TreeNode;
+
 class Solution {
  public:
   bool is_equal_tree(TreeNode* t1, TreeNode* t2) {

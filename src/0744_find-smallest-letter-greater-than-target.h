@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   char nextGreatestLetter(vector<char>& letters, char target) {

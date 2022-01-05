@@ -1,3 +1,4 @@
+#include "base.h"
 class Solution {
  public:
   int maximumDifference(vector<int>& nums) {
@@ -5,12 +6,11 @@ class Solution {
     int min = INT_MAX;
     for (int n : nums) {
       if (min < n) {
-        ret = max(n - min);
-      }
-      if (n < min) {
+        ret = max(n - min, ret);
+      } else {
         min = n;
       }
-      return ret;
     }
+    return ret;
   }
 };

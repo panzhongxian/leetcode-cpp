@@ -1,4 +1,5 @@
-// TO ENHANCE
+#include "base.h"
+typedef base::TreeNode<int> TreeNode;
 class Solution {
  public:
   vector<int> findMode(TreeNode* root) {

@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool uniqueOccurrences(vector<int>& arr) {

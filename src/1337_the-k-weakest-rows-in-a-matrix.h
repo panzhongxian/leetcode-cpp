@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int get_soldier_count(const vector<int> vec) {

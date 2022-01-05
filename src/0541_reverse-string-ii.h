@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   string reverseStr(string s, int k) {

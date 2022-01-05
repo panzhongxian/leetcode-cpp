@@ -1,4 +1,5 @@
 #include "base.h"
+typedef base::TreeNode<int> TreeNode;
 
 class Solution {
   int max_path_sum;

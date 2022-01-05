@@ -1,3 +1,6 @@
+#include "base.h"
+typedef base::TreeNode<int> TreeNode;
+
 class Solution {
  public:
   bool isCousins(TreeNode* root, int x, int y) {

@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   void insert_words(string s) {

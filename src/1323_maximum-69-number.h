@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int maximum69Number(int num) {

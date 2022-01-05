@@ -1,3 +1,5 @@
+#include "base.h"
+
 namespace std {
 typedef pair<int, int> Domino;
 template <>

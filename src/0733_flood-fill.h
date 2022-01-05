@@ -1,3 +1,5 @@
+#include "base.h"
+
 struct PointWithOrigin {
   int i;
   int j;

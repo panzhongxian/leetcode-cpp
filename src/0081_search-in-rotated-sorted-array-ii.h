@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  private:
   int min_value_index;

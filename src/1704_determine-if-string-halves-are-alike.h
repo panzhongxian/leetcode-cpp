@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   inline bool is_vowel(char c) {

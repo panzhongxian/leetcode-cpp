@@ -1,3 +1,5 @@
+#include "base.h"
+
 class T {
  public:
   int64_t left;

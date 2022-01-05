@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool is_dividing_number(int i) {

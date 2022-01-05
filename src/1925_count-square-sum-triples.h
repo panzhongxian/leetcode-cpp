@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
   vector<int> square_list;
   unordered_map<int, int> square_map;

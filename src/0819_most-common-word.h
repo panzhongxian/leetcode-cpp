@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   string mostCommonWord(string paragraph, vector<string>& banned) {

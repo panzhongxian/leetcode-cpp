@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   void splitDigits(int n, vector<char>& digits) {

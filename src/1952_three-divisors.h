@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   int get_root_of_square_number(int i) {

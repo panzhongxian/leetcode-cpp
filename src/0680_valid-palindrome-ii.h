@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool check_is_palindrome(const string& s, int& l, int& r) {

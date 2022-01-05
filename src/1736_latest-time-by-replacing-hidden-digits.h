@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   inline int get_digit_value(char c) { return c == '?' ? -1 : c - '0'; }

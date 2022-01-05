@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   string restoreString(string s, vector<int>& indices) {

@@ -3,7 +3,9 @@
 
 #include <algorithm>
 #include <cmath>
+#include <list>
 #include <map>
+#include <numeric>  // std::accumulate
 #include <ostream>
 #include <queue>
 #include <stack>

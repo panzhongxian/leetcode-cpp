@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   vector<string> generateParenthesis(int n) {

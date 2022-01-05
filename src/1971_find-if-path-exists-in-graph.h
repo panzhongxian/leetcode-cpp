@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool validPath(int n, vector<vector<int>>& edges, int start, int end) {

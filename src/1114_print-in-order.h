@@ -1,3 +1,5 @@
+#include "base.h"
+
 #include <unistd.h>
 class Foo {
  public:

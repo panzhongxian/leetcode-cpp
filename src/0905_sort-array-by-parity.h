@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   vector<int> sortArrayByParity(vector<int>& A) {

@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool rotateString(string A, string B) {

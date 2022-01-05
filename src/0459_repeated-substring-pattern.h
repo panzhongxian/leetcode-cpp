@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   bool checkSubStr(string& s, int pos, int len) {

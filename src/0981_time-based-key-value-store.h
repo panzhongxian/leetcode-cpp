@@ -1,3 +1,5 @@
+#include "base.h"
+
 // The timestamps for all TimeMap.set operations are strictly increasing.
 class TimeMap {
  private:
@@ -34,7 +36,7 @@ class TimeMap {
     }
 
     if (mid == tvec.size()) {
-      return tvec.back();
+      return to_string(tvec.back());
     } else if (tvec[mid] <= timestamp) {
       return key_time_value_map[key].vvec[mid];
     } else {

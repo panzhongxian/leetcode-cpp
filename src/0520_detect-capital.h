@@ -1,3 +1,5 @@
+#include "base.h"
+
 // case1: USA, case2: leetcode, case3: Google
 static inline bool is_lower(char c) { return c >= 'a' && c <= 'z'; }
 class Solution {

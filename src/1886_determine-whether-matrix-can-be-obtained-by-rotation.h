@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   typedef function<int(int, int, int)> rotate_index_func;

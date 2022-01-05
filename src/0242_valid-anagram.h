@@ -1,3 +1,5 @@
+#include "base.h"
+
 #define ARR_SIZE 26
 
 class Solution {

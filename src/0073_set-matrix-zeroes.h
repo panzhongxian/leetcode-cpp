@@ -3,30 +3,6 @@
 class Solution {
  public:
   void setZeroes(vector<vector<int>>& matrix) {
-    unordered_set<int> row_set;
-    unordered_set<int> col_set;
-    for (size_t i = 0; i < matrix.size(); ++i) {
-      for (size_t j = 0; j < matrix[0].size(); ++j) {
-        if (matrix[i][j] == 0) {
-          row_set.insert(i);
-          col_set.insert(j);
-        }
-      }
-    }
-
-    for (size_t i = 0; i < matrix.size(); ++i) {
-      for (size_t j = 0; j < matrix[0].size(); ++j) {
-        if (row_set.count(i) != 0 || col_set.count(j) != 0) {
-          matrix[i][j] = 0;
-        }
-      }
-    }
-  }
-};
-
-class Solution {
- public:
-  void setZeroes(vector<vector<int>>& matrix) {
     bool first_row_is_zero = false;
     bool first_col_is_zero = false;
     for (size_t i = 0; i < matrix[0].size(); ++i) {

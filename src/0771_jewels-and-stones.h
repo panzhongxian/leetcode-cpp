@@ -1,3 +1,5 @@
+#include "base.h"
+
 #include <unordered_map>
 
 class Solution {

@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   static bool check_repeate(string& str, int n) {

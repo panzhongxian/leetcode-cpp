@@ -1,3 +1,4 @@
+#include "base.h"
 class Solution {
  public:
   vector<int> constructRectangle(int area) {

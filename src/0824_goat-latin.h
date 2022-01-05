@@ -1,3 +1,5 @@
+#include "base.h"
+
 class Solution {
  public:
   size_t get_next_word(string& sentence, size_t pos, string* word) {

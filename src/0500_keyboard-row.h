@@ -1,3 +1,4 @@
+#include "base.h"
 class Solution {
   static int m[26];
   static bool init_flag;

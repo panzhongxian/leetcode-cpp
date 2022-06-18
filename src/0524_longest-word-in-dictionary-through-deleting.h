@@ -5,15 +5,17 @@ class Solution {
       return trigger == s;
     }
     int j = 0;
-    for (int i = 0; i < trigger.size(); i++) {
+    int i = 0;
+    for (; i < trigger.size() && j < s.size(); i++) {
       while (j < s.size() && s[j] != trigger[i]) {
         j++;
         if (j == s.size()) {
           return false;
         }
       }
+      j++;
     }
-    return true;
+    return i == trigger.size();
   }
   string findLongestWord(string s, vector<string>& dictionary) {
     string ret;

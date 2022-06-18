@@ -6,10 +6,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # Only needed for tests, not to build the OpenCensus library.
 http_archive(
     name = "com_google_googletest",
-    strip_prefix = "googletest-main",
-    urls = ["https://github.com/google/googletest/archive/main.zip"],
-    #strip_prefix = "googletest-703bd9caab50b139428cea1aaff9974ebee5742e",
-    #urls = ["https://github.com/google/googletest/archive/703bd9caab50b139428cea1aaff9974ebee5742e.zip"],
+    strip_prefix = "googletest-release-1.11.0",
+    urls = ["https://github.com/google/googletest/archive/refs/tags/release-1.11.0.tar.gz"],
 )
 
 # Google Benchmark library.
@@ -26,3 +24,16 @@ http_archive(
     strip_prefix = "abseil-cpp-master",
     urls = ["https://github.com/abseil/abseil-cpp/archive/master.zip"],
 )
+
+http_archive(
+    name = "bazel_skylib",
+    sha256 = "f7be3474d42aae265405a592bb7da8e171919d74c16f082a5457840f06054728",
+    urls = [
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.2.1/bazel-skylib-1.2.1.tar.gz",
+        "https://github.com/bazelbuild/bazel-skylib/releases/download/1.2.1/bazel-skylib-1.2.1.tar.gz",
+    ],
+)
+
+load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
+
+bazel_skylib_workspace()

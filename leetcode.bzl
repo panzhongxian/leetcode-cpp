@@ -23,6 +23,7 @@ def lc_deps():
         srcs = [
             "utils/base.cc",
         ],
+        visibility = ["//visibility:public"],
         strip_include_prefix = "utils",
         hdrs = [
             "utils/base.h",
@@ -51,6 +52,7 @@ def lc_gen():
                     "@com_google_googletest//:gtest_main",
                     ":base",
                 ],
+                visibility = ["//visibility:public"],
             )
 
             native.cc_test(

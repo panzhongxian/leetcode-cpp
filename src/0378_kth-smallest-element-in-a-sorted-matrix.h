@@ -1,9 +1,7 @@
-#include <cassert>
-#include <map>
+#include <queue>
 #include <vector>
 
-using std::multimap;
-using std::pair;
+using std::priority_queue;
 using std::vector;
 
 class Solution {

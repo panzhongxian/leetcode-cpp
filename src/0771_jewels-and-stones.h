@@ -1,6 +1,6 @@
-#include "base.h"
-
 #include <unordered_map>
+
+#include "base.h"
 
 class Solution {
  public:

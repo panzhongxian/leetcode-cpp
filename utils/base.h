@@ -161,9 +161,9 @@ void DumpVector(vector<T> v) {
 }
 
 // TODO 应该怎么派生TreeNode的类，才能使用上边的工厂函数？
-template ostream& operator<<<int>(ostream& os, const vector<int>& v);
-template ostream& operator<<<vector<int>>(ostream& os,
-                                          const vector<vector<int>>& v);
+template ostream& operator<< <int>(ostream& os, const vector<int>& v);
+template ostream& operator<< <vector<int>>(ostream& os,
+                                           const vector<vector<int>>& v);
 
 }  // namespace base
 

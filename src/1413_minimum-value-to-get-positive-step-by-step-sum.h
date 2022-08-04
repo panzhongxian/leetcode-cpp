@@ -1,3 +1,5 @@
+#include <climits>
+
 #include "base.h"
 
 class Solution {

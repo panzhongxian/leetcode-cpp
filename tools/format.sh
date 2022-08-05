@@ -32,9 +32,9 @@ FIND="find . -name .git -prune -o -name pic -prune -o -name _deps -prune -o -nam
 
 if [[ "$sed_check" == "y" ]]; then
   # No CRLF line endings.
-  sed -i 's/\r$//' $($FIND -type f -print)
+  sed -i 's/\r$//' $($FIND -name '*.cc' -print -o -name '*.h' -print)
   # No trailing spaces.
-  sed -i 's/ \+$//' $($FIND -type f -print)
+  sed -i 's/ \+$//' $($FIND -name '*.cc' -print -o -name '*.h' -print)
 fi
 
 if [[ "$tools_check" == "y" ]]; then

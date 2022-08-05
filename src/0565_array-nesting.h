@@ -55,8 +55,8 @@ class Solution {
           case kBreakTypeCircle:
             max_len[index] = base_size;
             break;
-          default:  //
-              ;     // pass
+          default:     //
+                    ;  // pass
         }
         s.pop();
         ret = max(max_len[index], ret);

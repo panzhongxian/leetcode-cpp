@@ -19,14 +19,11 @@ class Solution {
 
   bool findRotation(vector<vector<int>>& mat, vector<vector<int>>& target) {
     return mat == target ||
-           is_rotated(
-               mat, target, [](int, int j, int) { return j; },
-               [](int i, int, int n) { return n - i - 1; }) ||
-           is_rotated(
-               mat, target, [](int i, int, int n) { return n - i - 1; },
-               [](int, int j, int n) { return n - j - 1; }) ||
-           is_rotated(
-               mat, target, [](int, int j, int n) { return n - j - 1; },
-               [](int i, int, int) { return i; });
+           is_rotated(mat, target, [](int, int j, int) { return j; },
+                      [](int i, int, int n) { return n - i - 1; }) ||
+           is_rotated(mat, target, [](int i, int, int n) { return n - i - 1; },
+                      [](int, int j, int n) { return n - j - 1; }) ||
+           is_rotated(mat, target, [](int, int j, int n) { return n - j - 1; },
+                      [](int i, int, int) { return i; });
   }
 };
